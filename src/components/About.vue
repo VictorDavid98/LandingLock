@@ -9,6 +9,7 @@
               <h1 class="font-weight-light display-2">
                 Seguridad Para tú Empresa
               </h1>
+              
               <h1 class="font-weight-light display-1 mb-3">
                 Gestiona Tú Equipo de Seguridad
               </h1>

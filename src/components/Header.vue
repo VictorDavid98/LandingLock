@@ -1,7 +1,7 @@
 <template>
   <div>
-    <v-navigation-drawer v-model="drawer" app temporary dark src="">
-      <v-list>
+    <v-navigation-drawer v-model="drawer" app temporary dark>
+      <!-- <v-list>
         <v-list-item>
           <v-list-item-avatar>
             <img src="@/assets/img/bgDrawer.jpg" alt="logo" />
@@ -11,7 +11,7 @@
             <v-list-item-subtitle>By Loginsa.</v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
-      </v-list>
+      </v-list> -->
 
       <v-divider />
 
@@ -22,7 +22,7 @@
           link
           @click="$vuetify.goTo(link)"
         >
-          <v-list-item-icon class="justify-center">
+          <v-list-item-icon>
             <v-icon>{{ icon }}</v-icon>
           </v-list-item-icon>
           <v-list-item-content>
@@ -38,14 +38,15 @@
       app
       :color="color"
       :flat="flat"
-      dark
+      light
       class="px-15"
       :class="{ expand: flat }"
+      
     >
       <v-toolbar-title>
-        <v-img src="@/assets/img/logo-lock.png" max-width="100px" />
+        <v-img src="@/assets/img/logo-lock.png" max-width="100px" class="mr-16"/>
       </v-toolbar-title>
-      <v-spacer />
+      <v-spacer></v-spacer>
       <v-app-bar-nav-icon
         @click.stop="drawer = !drawer"
         class="mr-4"
@@ -53,16 +54,16 @@
       />
       <div v-else>
         <v-btn text @click="$vuetify.goTo('#hero')">
-          <span class="mr-2">Home</span>
+          <span class="mr-3">Home</span>
         </v-btn>
         <v-btn text @click="$vuetify.goTo('#about')">
-          <span class="mr-2">Información</span>
+          <span class="mr-3">Información</span>
         </v-btn>
         <v-btn text @click="$vuetify.goTo('#plus')">
-          <span class="mr-2">Plus</span>
+          <span class="mr-3">Plus</span>
         </v-btn>
         <v-btn text @click="$vuetify.goTo('#planes')">
-          <span class="mr-2">Planes</span>
+          <span class="mr-3">Planes</span>
         </v-btn>
       </div>
     </v-app-bar>
@@ -111,6 +112,10 @@ export default {
 <style>
 .v-toolbar {
   transition: 0.6s;
+}
+.navegacion{
+  display: flex;
+  flex-direction:column;
 }
 
 .expand {
