@@ -15,6 +15,7 @@
             rounded
             outlined
             large
+
             dark
             @click="$vuetify.goTo('#features')"
             class="mt-7 mr-5"
@@ -77,16 +78,26 @@
         </svg>
       </div>
     </div>
-
+    <v-dialog v-model="dialog" max-width="500px">
+      <iframe
+        src="http://player.vimeo.com/video/525764495"
+        width="500"
+        height="281"
+        frameborder=""
+      ></iframe>
+    </v-dialog>
+    <div class="svg-border-waves">
+      <img src="~@/assets/img/wave2.svg" />
+    </div>
     <!-- ********************************************************************************* -->
 
-    <v-container fluid id="features" class="mt-2">
+    <v-container fluid id="features" class="mt-4">
       <v-row align="center" justify="center">
         <v-col cols="10">
           <v-row align="center" justify="space-around">
             <v-col cols="12" class="text-center">
-              <h1 class="font-weight-light display-2">
-                Apoya el trabajo del personal de seguridad
+              <h1 class="font-weight-light display-2 mb-6">
+                ¿Que hace este sistema?
               </h1>
               <!-- <h1 class="font-weight-light" align="left">
                 Lock es una innovadora herramienta los sistemas de rondas,
@@ -103,8 +114,8 @@
               <v-hover v-slot:default="{ hover }">
                 <v-card
                   class="card"
-                  shaped
-                  :elevation="hover ? 10 : 4"
+                  shape8
+                  :elevation="hover ? 8 : 4"
                   :class="{ up: hover }"
                 >
                   <v-img
@@ -124,17 +135,7 @@
         </v-col>
       </v-row>
     </v-container>
-    <v-dialog v-model="dialog" max-width="500px">
-      <iframe
-        src="http://player.vimeo.com/video/525764495"
-        width="500"
-        height="281"
-        frameborder=""
-      ></iframe>
-    </v-dialog>
-    <div class="svg-border-waves">
-      <img src="~@/assets/img/wave2.svg" />
-    </div>
+    
   </section>
 </template>
 
@@ -146,7 +147,7 @@ export default {
       typeValue: '',
       typeStatus: false,
       typeArray: ['Intuitiva', 'efectiva', 'adaptable'],
-      typingSpeed: 100,
+      typingSpeed: 50,
       erasingSpeed: 100,
       newTextDelay: 2000,
       typeArrayIndex: 0,
@@ -156,19 +157,19 @@ export default {
       videoId: "i8IvvHJssWE",
       features: [
         {
-          img: require("@/assets/img/icon2.png"),
-          title: "Gestiona",
-          text: "info info info info info info.",
+          img: require("@/assets/img/sistema-de-seguridad.png"),
+          title: "Sistema de Rondas",
+          text: "El sistema permite supervisar las rondas realizadas por personal de seguridad utilizando tecnología NFC teniendo la información en detalle de forma rápida y en línea.",
         },
         {
-          img: require("@/assets/img/icon2.png"),
-          title: "Controla",
-          text: "info info info info info info.",
+          img: require("@/assets/img/frontera.png"),
+          title: "Control de Acceso",
+          text: "Con LOCK puedes permitir o restringir la entrada de una persona o vehículo a las empresas, bodegas, condominios, etc. Consiguiendo una mejor organización y administración de recursos.",
         },
         {
-          img: require("@/assets/img/icon2.png"),
-          title: "Organiza",
-          text: "info info info info info info.",
+          img: require("@/assets/img/lista-de-verificacion.png"),
+          title: "Gestión",
+          text: "Agilizar y automatizar los procesos de gestión, permitiendo tomar mejores decisiones en el momento adecuado. LOCK te proporciona toda la información de forma rápida y efectiva.",
         },
       ],
     };
@@ -317,7 +318,9 @@ span.cursor.typing {
 }
 </style>
 
-<style>
+<style scoped>
+
+
 .btn-play {
   transition: 0.2s;
 }

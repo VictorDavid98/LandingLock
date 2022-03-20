@@ -252,7 +252,7 @@ ul {
   bottom: 0;
   left: 0;
   width: 100%;
-  color: #f4f7f5;
+  color: #789fbd;
   z-index: -1;
 }
 

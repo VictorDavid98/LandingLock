@@ -12,7 +12,7 @@
               />
             </v-col>
             <v-col cols="12" sm="8" class="white--text text-left">
-              <h1 class="font-weight-light display-2 mb-2">Lock Seguridad</h1>
+              
               <h1 class="font-weight-light">
                 Hoy mas que nunca la seguridad se ha transformado en una
                 necesidad para todos.
@@ -46,12 +46,12 @@ export default {};
 
 <style scoped>
 #plus {
-  background-image: url("~@/assets/img/bgDownload.jpg");
+  background-image: url("~@/assets/img/flex-point-security-i35mOsE0z2U-unsplash.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 500px;
+  height: 400px;
 }
 
 #plus .container,

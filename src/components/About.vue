@@ -1,50 +1,31 @@
 <template>
   <section id="about">
-    <v-container fluid>
-      <v-row align="center" justify="center">
-        <v-col cols="10">
-          <v-row align="center" justify="center">
-            <v-col cols="12" md="7">
-              <!-- contenido -->
-              <h1 class="font-weight-light display-2">
-                Seguridad Para tú Empresa
-              </h1>
-              
-              <h1 class="font-weight-light display-1 mb-3">
-                Gestiona Tú Equipo de Seguridad
-              </h1>
-              <v-row>
-                <v-col cols="12" class="d-flex align-center">
-                  <v-img src="" max-width="60px" class="mr-4" />
-                  <p class="text-justify">
-                    info info info info info info info info info info
-                  </p>
-                </v-col>
-                <v-col cols="12" class="d-flex align-center">
-                  <v-img src="" max-width="60px" class="mr-4" />
-                  <p class="text-justify">
-                    info info info info info info info info info info
-                  </p>
-                </v-col>
-                <v-col cols="12" class="d-flex align-center">
-                  <v-img src="" max-width="60px" class="mr-4" />
-                  <p class="text-justify">
-                    info info info info info info info info info info
-                  </p>
-                </v-col>
-              </v-row>
-            </v-col>
-            <v-col cols="12" md="5" class="d-none d-md-flex">
-              <v-img
-                src="@/assets/img/logo-lock.png"
-                class="d-block ml-auto mr-auto"
-                max-width="400px"
-              />
-            </v-col>
-          </v-row>
-        </v-col>
-      </v-row>
-    </v-container>
+    <div class="contenedor">
+      <div class="content">
+        <div class="centrar">
+          <h1 style="font-size: 35px;">La seguridad que necesitas</h1>
+          <p class="mt-8">
+            Perder no es sinónimo de fracasar, perder es aprender y de este
+            aprendizaje nace el Lock, es por esto que al combinar nuestra
+            experiencia con un equipo de soporte y desarrolladores altamente
+            capacitados nos lleva a idear y diseñar un sistema que responde a
+            las necesidades y requerimientos actuales, Lock te entregará la
+            tranquilidad de saber que tus recursos están correctamente
+            administrados.
+          </p>
+          <p>
+            Apoya el trabajo del personal de seguridad y su gestión de
+            administración, LOCK es una plataforma flexible, programable y
+            adaptable a las necesidades particulares de cada usuario hoy más que
+            nunca la seguridad se ha transformado en una necesidad y un anhelo
+            para todos.
+          </p>
+        </div>
+        <div class="centrar-2 mt-6">
+          <img src="../assets/img/undraw_security_on_re_e491.svg" alt="" width="100%"/>
+        </div>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -55,5 +36,26 @@ export default {};
 <style scoped>
 #about {
   background-color: #f4f7f5;
+}
+.contenedor {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+}
+.content {
+  width: 80%;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  gap:40px;
+  color: black;
+}
+@media screen and (max-width: 768px){
+  .content{
+    display: flex;
+    flex-direction: column;
+  }
 }
 </style>

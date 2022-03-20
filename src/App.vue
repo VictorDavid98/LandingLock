@@ -33,8 +33,8 @@ import HomeSection from "./components/HomeSection";
 import About from "./components/About.vue";
 import Plus from "./components/Plus.vue";
 import Planes from "./components/Planes.vue";
-
 import foote from "./components/Footer.vue";
+
 
 export default {
   name: "App",
@@ -45,8 +45,8 @@ export default {
     About,
     Plus,
     Planes,
-    foote,
-  },
+    foote
+},
 
   data: () => ({
     fab: null,
