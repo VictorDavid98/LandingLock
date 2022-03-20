@@ -7,18 +7,16 @@
             <v-col sm="4" class="hidden-xs-only">
               <v-img
                 src="@/assets/img/logo-lock.png"
-                class="d-block ml-auto mr-auto"
-                max-width="350px"
+                class="d-block ml-auto mr-auto mb-16"
+                max-width="300px"
               />
             </v-col>
             <v-col cols="12" sm="8" class="white--text text-left">
               
-              <h1 class="font-weight-light">
-                Hoy mas que nunca la seguridad se ha transformado en una
-                necesidad para todos.
+              <h1 class="font-weight-bold mt-8">
+                Solución y Tranquilidad en tus manos.
                 <br />
-                <br />
-                te invitamos a registrarte...
+                Te invitamos a registrarte...
               </h1>
               <v-btn
                 rounded

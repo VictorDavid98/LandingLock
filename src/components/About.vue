@@ -42,20 +42,24 @@ export default {};
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px 0;
+  padding: 100px 0;
+  
 }
 .content {
-  width: 80%;
+  width: 81%;
   margin: 0;
   display: grid;
-  grid-template-columns: 5fr 2fr;
+  grid-template-columns: 2fr 1fr;
   gap:40px;
   color: black;
+  padding: 30px 30px;
+
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 968px){
   .content{
     display: flex;
     flex-direction: column;
+    padding: 0;
   }
 }
 </style>

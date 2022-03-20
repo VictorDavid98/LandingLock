@@ -39,12 +39,12 @@
       :color="color"
       :flat="flat"
       light
-      class="px-15"
+      class="px-2"
       :class="{ expand: flat }"
       
     >
       <v-toolbar-title>
-        <v-img src="@/assets/img/logo-lock.png" max-width="100px" class="mr-16"/>
+        <v-img src="@/assets/img/logo-lock.png" width="120px" class="mr-16"/>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-app-bar-nav-icon
@@ -121,5 +121,7 @@ export default {
 .expand {
   height: 80px !important;
   padding-top: 10px;
+}
+@media screen and (max-width: 968px) {
 }
 </style>

@@ -1,67 +1,69 @@
 <template>
   <section id="hero">
     <div class="background-i">
-      <div class="content">
-        <h1 class="display-3 font-weight-bold mb-5">Lock Seguridad
-        </h1>
-        <h1 style="font-size: 20px;">
-          Porque sabemos que la seguridad es indispensable hoy en dia, te presentamos
-          LOCK una innovadora herramienta de gestión y control integral de seguridad que es 
-          <span class="typed-text">{{ typeValue }}</span>
-          <span class="cursor" :class="{'typing': typeStatus }">&nbsp;</span>
-        </h1>
-        <div>
-          <v-btn
-            rounded
-            outlined
-            large
-
-            dark
-            @click="$vuetify.goTo('#features')"
-            class="mt-7 mr-5"
-          >
-            Ver más...
-            <v-icon class="ml-2">mdi-arrow-down</v-icon>
-          </v-btn>
-
-          <v-btn
-            rounded
-            outlined
-            large
-            dark
-            @click.stop="dialog = true"
-            class="mt-7 ml-5 playBut"
-          >
-            Ver Video
-            <svg
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-              x="0px"
-              y="0px"
-              width="60px"
-              height="40px"
-              viewBox="0 0 213.7 213.7"
-              enable-background="new 0 0 213.7 213.7"
-              xml:space="preserve"
+      <div class="content-hero">
+        <div class="content">
+          <h1 class="display-2 font-weight-bold mb-5">LOCK Seguridad</h1>
+          <h1 class="font-weight-light" style="font-size: 21px">
+            Porque sabemos que la seguridad es indispensable hoy en dia, te
+            presentamos
+            <span class="font-weight-bold">LOCK</span> una innovadora
+            herramienta de gestión y control integral de seguridad que es
+            <span class="typed-text font-weight-bold">{{ typeValue }}</span>
+            <span class="cursor" :class="{ typing: typeStatus }">&nbsp;</span>
+          </h1>
+          <div class="btn">
+            <v-btn
+              rounded
+              outlined
+              large
+              dark
+              @click="$vuetify.goTo('#features')"
+              class="mt-7 mr-2"
             >
-              <polygon
-                class="triangle"
-                id="XMLID_18_"
-                fill="none"
-                stroke-width="7"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-miterlimit="10"
-                points="73.5,62.5 148.5,105.8 73.5,149.1 "
-              />
-            </svg>
-          </v-btn>
+              Ver más...
+              <v-icon class="ml-2">mdi-arrow-down</v-icon>
+            </v-btn>
+
+            <v-btn
+              rounded
+              outlined
+              large
+              dark
+              @click.stop="dialog = true"
+              class="mt-7 playBut"
+            >
+              Ver Video
+              <svg
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+                x="0px"
+                y="0px"
+                width="60px"
+                height="40px"
+                viewBox="0 0 213.7 213.7"
+                enable-background="new 0 0 213.7 213.7"
+                xml:space="preserve"
+              >
+                <polygon
+                  class="triangle"
+                  id="XMLID_18_"
+                  fill="none"
+                  stroke-width="7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                  points="73.5,62.5 148.5,105.8 73.5,149.1 "
+                />
+              </svg>
+            </v-btn>
+          </div>
         </div>
-      </div>
-      <div>
-        <img src="../assets/img/mockups-04.png" alt="" width="100%" />
+        <div class="img">
+          <img src="../assets/img/mockups-04.png" alt="" width="100%" />
+        </div>
       </div>
 
       <div class="custom-shape-divider-bottom-1647534989">
@@ -135,18 +137,17 @@
         </v-col>
       </v-row>
     </v-container>
-    
   </section>
 </template>
 
 <script>
-import { setTimeout } from 'timers';
+import { setTimeout } from "timers";
 export default {
   data() {
     return {
-      typeValue: '',
+      typeValue: "",
       typeStatus: false,
-      typeArray: ['Intuitiva', 'efectiva', 'adaptable'],
+      typeArray: ["Intuitiva", "efectiva", "adaptable"],
       typingSpeed: 50,
       erasingSpeed: 100,
       newTextDelay: 2000,
@@ -197,14 +198,14 @@ export default {
     },
     typeText() {
       if (this.charIndex < this.typeArray[this.typeArrayIndex].length) {
-        if (!this.typeStatus) 
-          this.typeStatus = true;
+        if (!this.typeStatus) this.typeStatus = true;
 
-        this.typeValue += this.typeArray[this.typeArrayIndex].charAt(this.charIndex);
+        this.typeValue += this.typeArray[this.typeArrayIndex].charAt(
+          this.charIndex
+        );
         this.charIndex += 1;
 
         setTimeout(this.typeText, this.typingSpeed);
-        
       } else {
         this.typeStatus = false;
         setTimeout(this.eraseText, this.newTextDelay);
@@ -212,28 +213,28 @@ export default {
     },
     eraseText() {
       if (this.charIndex > 0) {
-        if (!this.typeStatus) 
-          this.typeStatus = true;
+        if (!this.typeStatus) this.typeStatus = true;
 
-
-        this.typeValue = this.typeArray[this.typeArrayIndex].substring(0, this.charIndex - 1);
+        this.typeValue = this.typeArray[this.typeArrayIndex].substring(
+          0,
+          this.charIndex - 1
+        );
         this.charIndex -= 1;
 
         setTimeout(this.eraseText, this.erasingSpeed);
-        
       } else {
         this.typeStatus = false;
         this.typeArrayIndex += 1;
-        if(this.typeArrayIndex >= this.typeArray.length)
+        if (this.typeArrayIndex >= this.typeArray.length)
           this.typeArrayIndex = 0;
-        
+
         setTimeout(this.typeText, this.typingSpeed + 1000);
       }
-    }
+    },
   },
   created() {
     setTimeout(this.typeText, this.newTextDelay + 200);
-  }
+  },
 };
 </script>
 
@@ -319,8 +320,6 @@ span.cursor.typing {
 </style>
 
 <style scoped>
-
-
 .btn-play {
   transition: 0.2s;
 }
@@ -384,7 +383,10 @@ section {
   width: 100%;
   position: relative;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+}
+.content-hero {
+  display: flex;
   align-items: center;
 }
 .content {
@@ -393,7 +395,30 @@ section {
   color: #ffffff;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+}
+@media screen and (max-width: 968px) {
+  .content-hero {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .content {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 100px 0 0 20px;
+  }
+  .btn {
+    display: flex;
+    width: 50%;
+  }
+  .img{
+    margin-top: 30px;
+    margin-left: 20px;
+    width: 90%;
+  }
+  
 }
 .custom-shape-divider-bottom-1647534989 {
   position: absolute;
