@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <header :color="color" :flat="flat" />
+    <header :flat="flat" />
     <v-main class="pt-0">
       <Header />
       <HomeSection />
@@ -88,5 +88,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>

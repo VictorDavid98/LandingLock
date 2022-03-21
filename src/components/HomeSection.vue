@@ -3,8 +3,8 @@
     <div class="background-i">
       <div class="content-hero">
         <div class="content">
-          <h1 class="display-2 font-weight-bold mb-5">LOCK Seguridad</h1>
-          <h1 class="font-weight-light" style="font-size: 21px">
+          <h1 class="titulo mb-5">LOCK Seguridad</h1>
+          <h1 class="subtitulo">
             Porque sabemos que la seguridad es indispensable hoy en dia, te
             presentamos
             <span class="font-weight-bold">LOCK</span> una innovadora
@@ -62,7 +62,12 @@
           </div>
         </div>
         <div class="img">
-          <img src="../assets/img/mockups-04.png" alt="" width="100%" />
+          <img
+            src="../assets/img/mockups-04.a54d9c50.webp"
+            alt=""
+            width="90%"
+            style="position: relative"
+          />
         </div>
       </div>
 
@@ -88,18 +93,16 @@
         frameborder=""
       ></iframe>
     </v-dialog>
-    <div class="svg-border-waves">
-      <img src="~@/assets/img/wave2.svg" />
-    </div>
+
     <!-- ********************************************************************************* -->
 
     <v-container fluid id="features" class="mt-4">
-      <v-row align="center" justify="center">
+      <v-row align="center" justify="center" class="dark-mode">
         <v-col cols="10">
           <v-row align="center" justify="space-around">
             <v-col cols="12" class="text-center">
               <h1 class="font-weight-light display-2 mb-6">
-                ¿Que hace este sistema?
+                Conoce las funciones de LOCK
               </h1>
               <!-- <h1 class="font-weight-light" align="left">
                 Lock es una innovadora herramienta los sistemas de rondas,
@@ -158,17 +161,17 @@ export default {
       videoId: "i8IvvHJssWE",
       features: [
         {
-          img: require("@/assets/img/sistema-de-seguridad.png"),
+          img: require("@/assets/img/sistema-de-seguridad.ea1d6f00.webp"),
           title: "Sistema de Rondas",
           text: "El sistema permite supervisar las rondas realizadas por personal de seguridad utilizando tecnología NFC teniendo la información en detalle de forma rápida y en línea.",
         },
         {
-          img: require("@/assets/img/frontera.png"),
+          img: require("@/assets/img/frontera.cdc934da.webp"),
           title: "Control de Acceso",
           text: "Con LOCK puedes permitir o restringir la entrada de una persona o vehículo a las empresas, bodegas, condominios, etc. Consiguiendo una mejor organización y administración de recursos.",
         },
         {
-          img: require("@/assets/img/lista-de-verificacion.png"),
+          img: require("@/assets/img/lista-de-verificacion.d5ba5e4d.webp"),
           title: "Gestión",
           text: "Agilizar y automatizar los procesos de gestión, permitiendo tomar mejores decisiones en el momento adecuado. LOCK te proporciona toda la información de forma rápida y efectiva.",
         },
@@ -375,7 +378,7 @@ section {
   position: relative;
 }
 .background-i {
-  background-image: url("../assets/img/img-back.png");
+  background-image: url("../assets/img/img-back.1d023508.webp");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -397,6 +400,16 @@ section {
   flex-direction: column;
   justify-content: center;
 }
+.titulo {
+  font-size: 40px;
+}
+.subtitulo {
+  font-weight: 300;
+}
+.img{
+  display: flex;
+  justify-content: flex-end;
+}
 @media screen and (max-width: 968px) {
   .content-hero {
     flex-direction: column;
@@ -404,21 +417,28 @@ section {
     align-items: flex-start;
   }
   .content {
-    width: 80%;
+    width: 75%;
     display: flex;
     flex-direction: column;
     margin: 100px 0 0 20px;
   }
+  .titulo {
+    font-size: 35px;
+  }
+  .subtitulo {
+    font-size: 20px;
+    font-weight: 300;
+  }
   .btn {
     display: flex;
-    width: 50%;
+    flex-direction: column;
   }
-  .img{
+  .img {
+    display: none;
     margin-top: 30px;
     margin-left: 20px;
     width: 90%;
   }
-  
 }
 .custom-shape-divider-bottom-1647534989 {
   position: absolute;
@@ -438,5 +458,19 @@ section {
 
 .custom-shape-divider-bottom-1647534989 .shape-fill {
   fill: #ffffff;
+}
+body.dark .custom-shape-divider-bottom-1647534989 .shape-fill {
+  fill: #020085;
+}
+
+body.dark .dark-mode {
+  color: white;
+}
+body.dark #hero {
+  background-color: #020085;
+}
+body.dark .card {
+  background-color: #6200ff;
+  color: #fff;
 }
 </style>

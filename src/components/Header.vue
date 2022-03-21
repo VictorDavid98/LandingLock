@@ -1,18 +1,6 @@
 <template>
-  <div>
-    <v-navigation-drawer v-model="drawer" app temporary dark>
-      <!-- <v-list>
-        <v-list-item>
-          <v-list-item-avatar>
-            <img src="@/assets/img/bgDrawer.jpg" alt="logo" />
-          </v-list-item-avatar>
-          <v-list-item-content>
-            <v-list-item-title class="title">Lockseguridad</v-list-item-title>
-            <v-list-item-subtitle>By Loginsa.</v-list-item-subtitle>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list> -->
-
+  <div id="header" >
+    <v-navigation-drawer v-model="drawer" app temporary >
       <v-divider />
 
       <v-list dense>
@@ -22,7 +10,7 @@
           link
           @click="$vuetify.goTo(link)"
         >
-          <v-list-item-icon>
+          <v-list-item-icon class="justify-center">
             <v-icon>{{ icon }}</v-icon>
           </v-list-item-icon>
           <v-list-item-content>
@@ -33,18 +21,10 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-
-    <v-app-bar
-      app
-      :color="color"
-      :flat="flat"
-      light
-      class="px-2"
-      :class="{ expand: flat }"
-      
-    >
+    <v-app-bar app :flat="flat" class="nav-i" :class="{ expand: flat }">
       <v-toolbar-title>
-        <v-img src="@/assets/img/logo-lock.png" width="120px" class="mr-16"/>
+        <v-img src="@/assets/img/logo-lock.0508bfe3.webp" width="120px" class="logo-1 mr-16" />
+        
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-app-bar-nav-icon
@@ -66,6 +46,10 @@
           <span class="mr-3">Planes</span>
         </v-btn>
       </div>
+      <button class="switch" id="switch">
+        <span></span>
+        <span></span>
+      </button>
     </v-app-bar>
   </div>
 </template>
@@ -76,7 +60,7 @@ export default {
     drawer: null,
     isXs: false,
     items: [
-      ["mdi-home-outline", "Home", "#hero"],
+      ["mdi-home-outline", "Hom", "#hero"],
       ["mdi-information-outline", "About", "#about"],
       ["mdi-web", "Plus", "#plus"],
       ["mdi-currency-usd", "Planes", "#planes"],
@@ -84,7 +68,6 @@ export default {
     ],
   }),
   props: {
-    color: String,
     flat: Boolean,
   },
   methods: {
@@ -105,17 +88,82 @@ export default {
   mounted() {
     this.onResize();
     window.addEventListener("resize", this.onResize, { passive: true });
+    const btnSwitch = document.querySelector("#switch");
+    btnSwitch.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      btnSwitch.classList.toggle("active");
+    });
   },
 };
 </script>
 
 <style>
+body.dark .nav-i {
+  background-color: #020085 !important;
+}
+body.dark .nav-i span{
+  color: #fff;
+}
+
+
+.nav-i .switch {
+  background: #343d5b;
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media (max-width: 910px) {
+  .nav-i .switch .switch {
+    display: none;
+  }
+}
+
+.nav-i .switch::after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  background: #f1f1f1;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+  -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.nav-i .switch.active {
+  background: orange;
+  color: black;
+}
+
+.nav-i .switch.active::after {
+  right: 0;
+  left: unset;
+}
+
+.nav-i .switch span {
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  display: block;
+  background: none;
+  color: #fff;
+}
 .v-toolbar {
   transition: 0.6s;
-}
-.navegacion{
-  display: flex;
-  flex-direction:column;
 }
 
 .expand {

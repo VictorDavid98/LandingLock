@@ -6,7 +6,7 @@
           <v-row align="center" justify="center">
             <v-col sm="4" class="hidden-xs-only">
               <v-img
-                src="@/assets/img/logo-lock.png"
+                src="@/assets/img/logo-lock.0508bfe3.webp"
                 class="d-block ml-auto mr-auto mb-16"
                 max-width="300px"
               />
@@ -44,7 +44,7 @@ export default {};
 
 <style scoped>
 #plus {
-  background-image: url("~@/assets/img/flex-point-security-i35mOsE0z2U-unsplash.jpg");
+  background-image: url("~@/assets/img/flex-point-security-i35mOsE0z2U-unsplash.b2c6a17e.webp");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;

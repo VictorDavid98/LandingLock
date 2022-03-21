@@ -3,8 +3,8 @@
     <v-container fluid>
       <v-row align="center" justify="center">
         <v-col cols="10">
-          <v-card style="width: 100%">
-            <h1 class="text-center pt-6 font-weight-light display-2">
+          <v-card class="tabla-d" style="width: 100%">
+            <h1 class="text-center pt-6 font-weight-light display-2 mt-16">
               Planes Fijos
             </h1>
             <v-divider class="my-6"></v-divider>
@@ -19,23 +19,23 @@
                         </div>
                       </div>
                     </div>
-                    <div class="text--disabled text-uppercase text-h5 my-2">
+                    <div class="text-uppercase text-h5 my-2">
                       Básico
                     </div>
                     <v-divider class="my-2" />
-                    <div class="text-uppercase blue--text">
+                    <div class="text-uppercase">
                       Caracteristicas del plan
                     </div>
                     <v-divider class="my-2" />
-                    <div class="text-uppercase blue--text">
+                    <div class="text-uppercase">
                       Caracteristicas del plan
                     </div>
                     <v-divider class="my-2" />
-                    <div class="text-uppercase blue--text">
+                    <div class="text-uppercase">
                       Otras caracteristicas...
                     </div>
                     <v-divider class="my-2" />
-                    <div class="text-uppercase text-h4 mt-6 blue--text">
+                    <div class="text-uppercase text-h4 mt-6">
                       $ 15.000
                     </div>
                     <v-btn
@@ -69,21 +69,21 @@
                         </div>
                       </div>
                     </div>
-                    <div class="text--disabled text-uppercase text-h5 my-2">
+                    <div class="text-uppercase text-h5 my-2">
                       Profesional
                     </div>
                     <v-divider class="my-2" />
-                    <div class="text-uppercase blue--text">Plan basico +</div>
+                    <div class="text-uppercase">Plan basico +</div>
                     <v-divider class="my-2" />
-                    <div class="text-uppercase blue--text">
+                    <div class="text-uppercase">
                       Caracteristicas del plan
                     </div>
                     <v-divider class="my-2" />
-                    <div class="text-uppercase blue--text">
+                    <div class="text-uppercase">
                       Otras caracteristicas...
                     </div>
                     <v-divider class="my-2" />
-                    <div class="text-uppercase text-h4 mt-6 blue--text">
+                    <div class="text-uppercase text-h4 mt-6">
                       $ 110.000
                     </div>
                     <v-btn
@@ -122,23 +122,23 @@
                         </div>
                       </div>
                     </div>
-                    <div class="text--disabled text-uppercase text-h5 my-2">
+                    <div class="text-uppercase text-h5 my-2">
                       Empresarial
                     </div>
                     <v-divider class="my-2" />
-                    <div class="text-uppercase blue--text">
+                    <div class="text-uppercase">
                       Plan profesional +
                     </div>
                     <v-divider class="my-2" />
-                    <div class="text-uppercase blue--text">
+                    <div class="text-uppercase">
                       Caracteristicas del plan
                     </div>
                     <v-divider class="my-2" />
-                    <div class="text-uppercase blue--text">
+                    <div class="text-uppercase">
                       Caracteristicas del plan
                     </div>
                     <v-divider class="my-2" />
-                    <div class="text-uppercase text-h4 mt-6 blue--text">
+                    <div class="text-uppercase text-h4 mt-6">
                       $ 500.000
                     </div>
                     <v-btn
@@ -170,7 +170,7 @@
         />
       </svg> -->
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200">
-  <path fill="#0099ff" fill-opacity="1" d="M0,32L120,42.7C240,53,480,75,720,74.7C960,75,1200,53,1320,42.7L1440,32L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
+  <path fill="#283e79" fill-opacity="1" d="M0,32L120,42.7C240,53,480,75,720,74.7C960,75,1200,53,1320,42.7L1440,32L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
 </svg>
     </div>
   </section>
@@ -178,7 +178,10 @@
 
 <style lang="scss">
 $main_color: #283e79;
-
+body.dark .tabla-d{
+  background-color: #6200ff;
+  color: #fff;
+}
 ul {
   font-size: 13px;
   line-height: 1.5em;
@@ -209,10 +212,7 @@ ul {
 </style>
 
 <style scoped>
-.header {
-  background-color: #283e79;
-  color: white;
-}
+
 
 .circle1 {
   border-radius: 50%;
@@ -245,12 +245,15 @@ ul {
   bottom: 0;
   left: 0;
   width: 100%;
-  color: #789fbd;
+  color: #f8f8f8;
   z-index: -1;
 }
 
 #planes {
   z-index: 0;
+}
+body.dark #planes{
+  background-color: #020085;
 }
 
 .content {

@@ -37,6 +37,9 @@ export default {};
 #about {
   background-color: #f4f7f5;
 }
+.body.dark #about{
+  background-color: #020085;
+}
 .contenedor {
   width: 100%;
   display: flex;
@@ -44,6 +47,9 @@ export default {};
   align-items: center;
   padding: 100px 0;
   
+}
+body.dark .contenedor{
+  background-color: #020085;
 }
 .content {
   width: 81%;
@@ -53,8 +59,11 @@ export default {};
   gap:40px;
   color: black;
   padding: 30px 30px;
-
 }
+body.dark .content{
+  color: #fff;
+}
+
 @media screen and (max-width: 968px){
   .content{
     display: flex;
