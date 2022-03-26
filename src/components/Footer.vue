@@ -1,6 +1,6 @@
 <template>
   <v-footer dark padless>
-    <v-card flat tile class="secondary white--text text-center">
+    <v-card flat tile class="white--text text-center">
       <v-card-text>
         <v-btn
           v-for="(icon, i) in icons"
@@ -68,10 +68,22 @@ export default {
 </script>
 
 <style>
+.body.dark .fondo{
+  background-color: #020085;
+}
 .footer-content{
   display: flex;
   justify-content: space-around;
 }
+@media screen and (max-width: 768px){
+  
+  .footer-content{
+    flex-direction: column;
+  }
+
+}
+  
+
 .footer-content h1{
   font-size: 20px;
   padding-bottom: 20px;

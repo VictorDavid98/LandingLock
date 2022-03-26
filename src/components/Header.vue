@@ -98,8 +98,9 @@ export default {
 </script>
 
 <style>
+
 body.dark .nav-i {
-  background-color: #020085 !important;
+  background-color: #6200ff !important;
 }
 body.dark .nav-i span{
   color: #fff;
@@ -138,7 +139,7 @@ body.dark .nav-i span{
   left: 0;
   right: unset;
   border-radius: 100px;
-  -webkit-transition: 0.3s ease all;
+  -webkit-transition: 0.1s ease all;
   transition: 0.3s ease all;
   -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);

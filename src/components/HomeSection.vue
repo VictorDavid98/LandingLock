@@ -65,7 +65,7 @@
           <img
             src="../assets/img/mockups-04.a54d9c50.webp"
             alt=""
-            width="90%"
+            width="100%"
             style="position: relative"
           />
         </div>
@@ -87,10 +87,11 @@
     </div>
     <v-dialog v-model="dialog" max-width="500px">
       <iframe
-        src="http://player.vimeo.com/video/525764495"
+        src="https://player.vimeo.com/video/525764495"
         width="500"
         height="281"
-        frameborder=""
+        frameborder="0"
+        webkitAllowFullScreen mozallowfullscreen allowFullScreen
       ></iframe>
     </v-dialog>
 
@@ -130,7 +131,7 @@
                     :class="{ 'zoom-efect': hover }"
                   ></v-img>
                   <h1 class="font-weight-regular">{{ feature.title }}</h1>
-                  <h4 class="font-weight-regular subtitle-1">
+                  <h4 class="font-weight-regular subtitle-1 justify">
                     {{ feature.text }}
                   </h4>
                 </v-card>
@@ -191,7 +192,7 @@ export default {
     },
     playing(event) {},
     change() {
-      this.videoId = "another video id";
+      this.videoId = "http://player.vimeo.com/video/525764495";
     },
     stop() {
       this.player.stopVideo();
@@ -256,7 +257,7 @@ export default {
   transition: all 0.5s ease;
 
   .triangle {
-    transition: all 0.7s ease-in-out;
+    transition: all 0.1s ease-in-out;
     stroke-dasharray: 240;
     stroke-dashoffset: 480;
     stroke: white;
@@ -326,7 +327,9 @@ span.cursor.typing {
 .btn-play {
   transition: 0.2s;
 }
-
+.justify{
+  text-align: justify;
+}
 .svg-border-waves .v-image {
   position: absolute;
   bottom: 0;

@@ -1,12 +1,16 @@
 <template>
   <v-app>
     <header :flat="flat" />
-    <v-main class="pt-0">
+    <v-main class="pt-0 fondo">
       <Header />
       <HomeSection />
       <About />
       <Plus />
-      <Planes />
+      <Testimoniales />
+      <Empresas />
+      <!-- <Planes /> -->
+      <Planes2 />
+
     </v-main>
     <v-scale-transition>
       <v-btn
@@ -32,8 +36,11 @@ import Header from "./components/Header.vue";
 import HomeSection from "./components/HomeSection";
 import About from "./components/About.vue";
 import Plus from "./components/Plus.vue";
-import Planes from "./components/Planes.vue";
+// import Planes from "./components/Planes.vue";
+import Planes2 from "./components/Planes2.vue";
 import foote from "./components/Footer.vue";
+import Testimoniales from "./components/Testimoniales.vue";
+import Empresas from "./components/Empresas.vue";
 
 
 export default {
@@ -44,8 +51,12 @@ export default {
     HomeSection,
     About,
     Plus,
-    Planes,
-    foote
+    Testimoniales,
+    Empresas,
+    // Planes,
+    Planes2,
+    foote,
+    
 },
 
   data: () => ({
@@ -88,4 +99,10 @@ export default {
 </script>
 
 <style scoped>
+.fondo{
+  background-color: #fff;
+}
+body.dark .fondo{
+  background-color: #020085;
+}
 </style>

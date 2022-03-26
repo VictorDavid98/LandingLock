@@ -19,30 +19,20 @@
                         </div>
                       </div>
                     </div>
-                    <div class="text-uppercase text-h5 my-2">
-                      Básico
-                    </div>
+                    <div class="text-uppercase text-h5 my-2">Básico</div>
                     <v-divider class="my-2" />
-                    <div class="text-uppercase">
-                      Caracteristicas del plan
-                    </div>
+                    <div class="text-uppercase">Caracteristicas del plan</div>
                     <v-divider class="my-2" />
-                    <div class="text-uppercase">
-                      Caracteristicas del plan
-                    </div>
+                    <div class="text-uppercase">Caracteristicas del plan</div>
                     <v-divider class="my-2" />
-                    <div class="text-uppercase">
-                      Otras caracteristicas...
-                    </div>
+                    <div class="text-uppercase">Otras caracteristicas...</div>
                     <v-divider class="my-2" />
-                    <div class="text-uppercase text-h4 mt-6">
-                      $ 15.000
-                    </div>
+                    <div class="text-uppercase text-h4 mt-6">$ 15.000</div>
                     <v-btn
                       v-bind="size"
                       rounded
                       outlined
-                      color="blue"
+                      color="orange"
                       class="mt-6"
                     >
                       ¡Contrata ahora!
@@ -69,28 +59,20 @@
                         </div>
                       </div>
                     </div>
-                    <div class="text-uppercase text-h5 my-2">
-                      Profesional
-                    </div>
+                    <div class="text-uppercase text-h5 my-2">Profesional</div>
                     <v-divider class="my-2" />
                     <div class="text-uppercase">Plan basico +</div>
                     <v-divider class="my-2" />
-                    <div class="text-uppercase">
-                      Caracteristicas del plan
-                    </div>
+                    <div class="text-uppercase">Caracteristicas del plan</div>
                     <v-divider class="my-2" />
-                    <div class="text-uppercase">
-                      Otras caracteristicas...
-                    </div>
+                    <div class="text-uppercase">Otras caracteristicas...</div>
                     <v-divider class="my-2" />
-                    <div class="text-uppercase text-h4 mt-6">
-                      $ 110.000
-                    </div>
+                    <div class="text-uppercase text-h4 mt-6">$ 110.000</div>
                     <v-btn
                       v-bind="size"
                       rounded
                       outlined
-                      color="blue"
+                      color="orange"
                       class="mt-6"
                     >
                       ¡contrata ahora!
@@ -122,30 +104,20 @@
                         </div>
                       </div>
                     </div>
-                    <div class="text-uppercase text-h5 my-2">
-                      Empresarial
-                    </div>
+                    <div class="text-uppercase text-h5 my-2">Empresarial</div>
                     <v-divider class="my-2" />
-                    <div class="text-uppercase">
-                      Plan profesional +
-                    </div>
+                    <div class="text-uppercase">Plan profesional +</div>
                     <v-divider class="my-2" />
-                    <div class="text-uppercase">
-                      Caracteristicas del plan
-                    </div>
+                    <div class="text-uppercase">Caracteristicas del plan</div>
                     <v-divider class="my-2" />
-                    <div class="text-uppercase">
-                      Caracteristicas del plan
-                    </div>
+                    <div class="text-uppercase">Caracteristicas del plan</div>
                     <v-divider class="my-2" />
-                    <div class="text-uppercase text-h4 mt-6">
-                      $ 500.000
-                    </div>
+                    <div class="text-uppercase text-h4 mt-6">$ 500.000</div>
                     <v-btn
                       v-bind="size"
                       rounded
                       outlined
-                      color="blue"
+                      color="orange"
                       class="mt-6"
                     >
                       ¡Contrata Ahora!
@@ -158,27 +130,21 @@
         </v-col>
       </v-row>
     </v-container>
-    <div class="svg-border-rounded text-light">
-      <!-- <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 144.54 17.34"
-        preserveAspectRatio="none"
-        fill="currentColor"
-      >
-        <path
-          d="M144.54,17.34H0V0H144.54ZM0,0S32.36,17.34,72.27,17.34,144.54,0,144.54,0"
-        />
-      </svg> -->
+    <!-- <div class="svg-border-rounded text-light">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200">
-  <path fill="#283e79" fill-opacity="1" d="M0,32L120,42.7C240,53,480,75,720,74.7C960,75,1200,53,1320,42.7L1440,32L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
-</svg>
-    </div>
+        <path
+          fill="#283e79"
+          fill-opacity="1"
+          d="M0,32L120,42.7C240,53,480,75,720,74.7C960,75,1200,53,1320,42.7L1440,32L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+        ></path>
+      </svg>
+    </div> -->
   </section>
 </template>
 
 <style lang="scss">
 $main_color: #283e79;
-body.dark .tabla-d{
+body.dark .tabla-d {
   background-color: #6200ff;
   color: #fff;
 }
@@ -212,8 +178,6 @@ ul {
 </style>
 
 <style scoped>
-
-
 .circle1 {
   border-radius: 50%;
   width: 150px;
@@ -234,6 +198,9 @@ ul {
   justify-content: center;
 }
 
+.body.dark .circle2 {
+  background-color: #ffa600;
+}
 .flex-center {
   display: flex;
   align-items: center;
@@ -252,7 +219,7 @@ ul {
 #planes {
   z-index: 0;
 }
-body.dark #planes{
+body.dark #planes {
   background-color: #020085;
 }
 

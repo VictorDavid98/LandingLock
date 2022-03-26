@@ -4,7 +4,7 @@
       <div class="content">
         <div class="centrar">
           <h1 style="font-size: 35px;">La seguridad que necesitas</h1>
-          <p class="mt-8">
+          <p class="mt-8 justify">
             Perder no es sinónimo de fracasar, perder es aprender y de este
             aprendizaje nace el Lock, es por esto que al combinar nuestra
             experiencia con un equipo de soporte y desarrolladores altamente
@@ -13,7 +13,7 @@
             tranquilidad de saber que tus recursos están correctamente
             administrados.
           </p>
-          <p>
+          <p class="justify">
             Apoya el trabajo del personal de seguridad y su gestión de
             administración, LOCK es una plataforma flexible, programable y
             adaptable a las necesidades particulares de cada usuario hoy más que
@@ -35,21 +35,23 @@ export default {};
 
 <style scoped>
 #about {
-  background-color: #f4f7f5;
+  margin-top: 100px;
+  background-color: #f3f3f3;
 }
-.body.dark #about{
-  background-color: #020085;
+
+.justify{
+  text-align: justify;
 }
 .contenedor {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 100px 0;
+  padding: 50px 0;
   
 }
 body.dark .contenedor{
-  background-color: #020085;
+  background-color: #0300c2;
 }
 .content {
   width: 81%;
