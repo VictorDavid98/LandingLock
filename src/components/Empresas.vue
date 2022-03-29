@@ -1,13 +1,13 @@
 <template>
   <div class="contenedor-empresas">
     
-    <div>
+    <div class="text-titulo">
       <h1 class="text-center mt-16 mb-16">Empresas con la que trabajamos</h1>
     </div>
     <div class="logos-empresas">
         <img class="img-logo" src="@/assets/img/empresas-logos/logo-falabella.png" alt="">
         <img class="img-logo" src="@/assets/img/empresas-logos/logo-adidas.png" alt="">
-        <img class="img-logo" src="@/assets/img/empresas-logos/logo-apple.png" alt="">
+        <img class="" src="@/assets/img/empresas-logos/logo-apple.png" width="40%" style="margin: 0 auto;" alt="">
         <img class="img-logo" src="@/assets/img/empresas-logos/logo-hites.png" alt="">
         <img class="img-logo" src="@/assets/img/empresas-logos/logo-lg.png" alt="">
         <img class="img-logo" src="@/assets/img/empresas-logos/logo-nestle.png" alt="">
@@ -36,10 +36,15 @@ export default {
 body.dark .contenedor-empresas {
   background-color: #0300c2;
 }
+body.dark .text-titulo {
+  color: #fff;
+}
+
 .logos-empresas{
     width: 85%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 15px;
     margin: 0 auto;
     align-items: center;
     
@@ -48,6 +53,13 @@ body.dark .contenedor-empresas {
 .img-logo{
     width: 60%;
     margin: 0 auto;
+}
+@media screen and (max-width: 968px){
+  .logos-empresas{
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+
+  }
 }
 
 </style>

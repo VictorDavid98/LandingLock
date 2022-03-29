@@ -1,8 +1,16 @@
 <template>
   <div class="contenedor-plan">
-    <svg class="wave-planes" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-  <path fill="#f3f3f3" fill-opacity="1" d="M0,256L24,250.7C48,245,96,235,144,224C192,213,240,203,288,170.7C336,139,384,85,432,90.7C480,96,528,160,576,192C624,224,672,224,720,197.3C768,171,816,117,864,117.3C912,117,960,171,1008,186.7C1056,203,1104,181,1152,154.7C1200,128,1248,96,1296,90.7C1344,85,1392,107,1416,117.3L1440,128L1440,0L1416,0C1392,0,1344,0,1296,0C1248,0,1200,0,1152,0C1104,0,1056,0,1008,0C960,0,912,0,864,0C816,0,768,0,720,0C672,0,624,0,576,0C528,0,480,0,432,0C384,0,336,0,288,0C240,0,192,0,144,0C96,0,48,0,24,0L0,0Z"></path>
-</svg>
+    <svg
+      class="wave-planes"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1440 320"
+    >
+      <path
+        fill="#f3f3f3"
+        fill-opacity="1"
+        d="M0,256L24,250.7C48,245,96,235,144,224C192,213,240,203,288,170.7C336,139,384,85,432,90.7C480,96,528,160,576,192C624,224,672,224,720,197.3C768,171,816,117,864,117.3C912,117,960,171,1008,186.7C1056,203,1104,181,1152,154.7C1200,128,1248,96,1296,90.7C1344,85,1392,107,1416,117.3L1440,128L1440,0L1416,0C1392,0,1344,0,1296,0C1248,0,1200,0,1152,0C1104,0,1056,0,1008,0C960,0,912,0,864,0C816,0,768,0,720,0C672,0,624,0,576,0C528,0,480,0,432,0C384,0,336,0,288,0C240,0,192,0,144,0C96,0,48,0,24,0L0,0Z"
+      ></path>
+    </svg>
     <div class="tabla-comparativa">
       <article class="tabs-table">
         <div class="tabs-table">
@@ -69,7 +77,9 @@
             </tr>
             <tr>
               <th>Control de Acceso</th>
-              <td></td>
+              <td>
+                <img src="~@/assets/img/check-solid.svg" width="25px" alt="" />
+              </td>
               <td>
                 <img src="~@/assets/img/check-solid.svg" width="25px" alt="" />
               </td>
@@ -79,9 +89,7 @@
             </tr>
             <tr>
               <th>Gestión</th>
-              <td>
-                <img src="~@/assets/img/check-solid.svg" width="25px" alt="" />
-              </td>
+              <td></td>
               <td>
                 <img src="~@/assets/img/check-solid.svg" width="25px" alt="" />
               </td>
@@ -124,15 +132,17 @@
             <tr>
               <th></th>
               <td>
-                <v-btn rounded outlined color="orange">
+                <v-btn rounded outlined color="orange" style="font-weight: 900">
                   ¡contrata ahora!
                 </v-btn>
               </td>
               <td>
-                <v-btn rounded outlined color="white"> ¡contrata ahora! </v-btn>
+                <v-btn rounded outlined color="white" style="font-weight: 900">
+                  ¡contrata ahora!
+                </v-btn>
               </td>
               <td>
-                <v-btn rounded outlined color="orange">
+                <v-btn rounded outlined color="orange" style="font-weight: 900">
                   ¡contrata ahora!
                 </v-btn>
               </td>
@@ -439,7 +449,7 @@ body.dark .contenedor-plan {
   box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.5);
 }
 body.dark .tabla-comparativa {
-  background-color: #6200ff;
+  background-color: #2e2bff;
   box-shadow: 0 0 25px 0 rgb(40, 54, 255);
 }
 
@@ -469,7 +479,7 @@ body.dark .tabla-comparativa {
   display: none;
 }
 .normal-table td:nth-child(3) {
-  background-color: rgb(0, 60, 255);
+  background-color: #2e2bff;
   color: #fff;
 }
 body.dark .normal-table td:nth-child(3) {
@@ -513,7 +523,7 @@ body.dark .normal-table th {
   padding: 0 5px !important;
   text-align: center;
   text-transform: uppercase;
-  font-size: 0.7rem !important;
+  font-size: 0.9rem !important;
   font-weight: bold;
   color: rgb(0, 0, 0);
   height: 2.5rem !important;
@@ -535,7 +545,8 @@ body.dark .normal-table .tag2 {
   text-transform: uppercase;
   font-weight: 700;
   margin: 1rem 0;
-  font-size: 0.9rem;
+  font-size: 1.4rem;
+  color: orange;
 }
 .normal-table .linkprod {
   background-color: gold;
@@ -583,11 +594,11 @@ body.dark .normal-table .tag2 {
     text-transform: uppercase;
   }
   body.dark .mobile-table th {
-    background-color: #6200ff;
+    background-color: #2e2bff;
     color: #fff;
   }
   body.dark .mobile-table td {
-    background-color: #6200ff;
+    background-color: #2e2bff;
     color: #fff;
   }
 
@@ -634,7 +645,7 @@ body.dark .normal-table .tag2 {
     transition: background 0.1s, color 0.1s;
   }
   body.dark .label {
-    background-color: #6200ff;
+    background-color: #2e2bff;
     color: #fff;
   }
   .input:focus + .label {
@@ -649,7 +660,7 @@ body.dark .normal-table .tag2 {
     color: #000;
   }
   body.dark .input:checked + .label {
-    background-color: #6200ff;
+    background-color: #2e2bff;
     color: #fff;
   }
   .panel {

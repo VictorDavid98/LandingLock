@@ -45,7 +45,7 @@
 export default {
   data() {
     return {
-      intervalo: 20000,
+      intervalo: 8000,
       titulo1: "Testimonios",
       titulo2: "¿Que opinan nuestros clientes?",
       colores: ["transparent", "transparent", "transparent"],

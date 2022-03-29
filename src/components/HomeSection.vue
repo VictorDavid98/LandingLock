@@ -417,24 +417,30 @@ section {
   .content-hero {
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
   }
   .content {
-    width: 75%;
+    width: 90%;
+    
+    text-align: justify;
     display: flex;
     flex-direction: column;
-    margin: 100px 0 0 20px;
+    margin: 130px 0 0 0px;
   }
   .titulo {
-    font-size: 35px;
+    font-size: 45px;
   }
   .subtitulo {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 300;
+    padding-top: 10px;
+    padding-bottom: 20px;
   }
   .btn {
+    width: 70%;
     display: flex;
     flex-direction: column;
+    
   }
   .img {
     display: none;
