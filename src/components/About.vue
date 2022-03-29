@@ -22,7 +22,7 @@
           </p>
         </div>
         <div class="centrar-2 mt-6">
-          <img src="../assets/img/undraw_security_on_re_e491.svg" alt="" width="100%"/>
+          <img src="../assets/img/undraw_secure_login_pdn4.svg" alt="" width="100%"/>
         </div>
       </div>
     </div>

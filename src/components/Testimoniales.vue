@@ -37,17 +37,7 @@
       </v-carousel-item>
     </v-carousel>
 
-    <svg
-      class="wave-empresas"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 1440 220"
-    >
-      <path
-        fill="#f3f3f3"
-        fill-opacity="1"
-        d="M0,64L48,69.3C96,75,192,85,288,101.3C384,117,480,139,576,160C672,181,768,203,864,181.3C960,160,1056,96,1152,90.7C1248,85,1344,139,1392,165.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-      ></path>
-    </svg>
+    
   </div>
 </template>
 
@@ -72,7 +62,7 @@ export default {
         {
           id: 2,
           nombre: "Josefa Campos",
-          iconoEmpresa: require("@/assets/img/logo-falabella.png"),
+          iconoEmpresa: require("@/assets/img/empresas-logos/logo-falabella.png"),
           cargo: "Product Manager",
           empresa: "Falabella",
           mensaje:
@@ -81,7 +71,7 @@ export default {
         {
           id: 3,
           nombre: "Nicolas Osorio",
-          iconoEmpresa: require("@/assets/img/logo-nestle.png"),
+          iconoEmpresa: require("@/assets/img/empresas-logos/logo-nestle.png"),
           cargo: "Director de Calidad",
           empresa: "Nestle",
           mensaje:
@@ -96,6 +86,11 @@ export default {
 <style>
 .contenedor-c {
   margin-top: 50px;
+  background-color: #f3f3f3;
+}
+body.dark .contenedor-c {
+  background-color: #0300c2;
+  
 }
 .c-testimonio {
   width: 85%;
@@ -108,8 +103,9 @@ export default {
   display: flex;
 }
 body.dark .c-testimonio {
-  background-color: #6200ff;
+  background-color: #2e2bff;
   color: #fff;
+  box-shadow: 0 0 15px 0 rgba(255, 255, 255, 0.5);
 }
 .parte1 {
   display: flex;

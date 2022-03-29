@@ -6,6 +6,7 @@
       <HomeSection />
       <About />
       <Plus />
+      <Presentacion />
       <Testimoniales />
       <Empresas />
       <!-- <Planes /> -->
@@ -41,6 +42,7 @@ import Planes2 from "./components/Planes2.vue";
 import foote from "./components/Footer.vue";
 import Testimoniales from "./components/Testimoniales.vue";
 import Empresas from "./components/Empresas.vue";
+import Presentacion from "./components/Presentacion.vue";
 
 
 export default {
@@ -51,12 +53,12 @@ export default {
     HomeSection,
     About,
     Plus,
+    Presentacion,
     Testimoniales,
     Empresas,
     // Planes,
     Planes2,
     foote,
-    
 },
 
   data: () => ({
@@ -103,6 +105,6 @@ export default {
   background-color: #fff;
 }
 body.dark .fondo{
-  background-color: #020085;
+  background-color: #2e2bff;
 }
 </style>

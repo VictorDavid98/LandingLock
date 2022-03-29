@@ -2,7 +2,7 @@
   <div class="contenedor-empresas">
     
     <div>
-      <h1 class="text-center">Empresas con la que trabajamos</h1>
+      <h1 class="text-center mt-16 mb-16">Empresas con la que trabajamos</h1>
     </div>
     <div class="logos-empresas">
         <img class="img-logo" src="@/assets/img/empresas-logos/logo-falabella.png" alt="">
@@ -39,10 +39,10 @@ body.dark .contenedor-empresas {
 .logos-empresas{
     width: 85%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     margin: 0 auto;
     align-items: center;
-    justify-content: center;
+    
 
 }
 .img-logo{

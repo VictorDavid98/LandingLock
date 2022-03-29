@@ -463,17 +463,17 @@ section {
   fill: #ffffff;
 }
 body.dark .custom-shape-divider-bottom-1647534989 .shape-fill {
-  fill: #020085;
+  fill: #2e2bff;
 }
 
 body.dark .dark-mode {
   color: white;
 }
 body.dark #hero {
-  background-color: #020085;
+  background-color: #2e2bff;
 }
 body.dark .card {
-  background-color: #6200ff;
+  background-color: #0300c2;
   color: #fff;
 }
 </style>

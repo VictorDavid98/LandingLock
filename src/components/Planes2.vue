@@ -1,16 +1,8 @@
 <template>
   <div class="contenedor-plan">
-    <svg
-      class="wave-planes"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 1440 250"
-    >
-      <path
-        fill="#f3f3f3"
-        fill-opacity="1"
-        d="M0,224L48,197.3C96,171,192,117,288,112C384,107,480,149,576,170.7C672,192,768,192,864,192C960,192,1056,192,1152,176C1248,160,1344,128,1392,112L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
-      ></path>
-    </svg>
+    <svg class="wave-planes" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <path fill="#f3f3f3" fill-opacity="1" d="M0,256L24,250.7C48,245,96,235,144,224C192,213,240,203,288,170.7C336,139,384,85,432,90.7C480,96,528,160,576,192C624,224,672,224,720,197.3C768,171,816,117,864,117.3C912,117,960,171,1008,186.7C1056,203,1104,181,1152,154.7C1200,128,1248,96,1296,90.7C1344,85,1392,107,1416,117.3L1440,128L1440,0L1416,0C1392,0,1344,0,1296,0C1248,0,1200,0,1152,0C1104,0,1056,0,1008,0C960,0,912,0,864,0C816,0,768,0,720,0C672,0,624,0,576,0C528,0,480,0,432,0C384,0,336,0,288,0C240,0,192,0,144,0C96,0,48,0,24,0L0,0Z"></path>
+</svg>
     <div class="tabla-comparativa">
       <article class="tabs-table">
         <div class="tabs-table">
@@ -125,9 +117,9 @@
             </tr>
             <tr>
               <th>Precio</th>
-              <td>desde $549.99</td>
-              <td>desde $409.00</td>
-              <td>desde $204.99</td>
+              <td>desde $59.990</td>
+              <td>desde $99.990</td>
+              <td>desde $129.990</td>
             </tr>
             <tr>
               <th></th>
@@ -213,7 +205,7 @@
               </tr>
               <tr>
                 <th>Precio</th>
-                <td>desde $549.99</td>
+                <td>desde $59.990</td>
               </tr>
               <tr>
                 <th></th>
@@ -299,7 +291,7 @@
               </tr>
               <tr>
                 <th>Precio</th>
-                <td>desde $549.99</td>
+                <td>desde $99.990</td>
               </tr>
               <tr>
                 <th></th>
@@ -397,7 +389,7 @@
               </tr>
               <tr>
                 <th>Precio</th>
-                <td>desde $549.99</td>
+                <td>desde $129.990</td>
               </tr>
               <tr>
                 <th></th>
@@ -427,7 +419,7 @@ export default {};
   align-items: center;
   justify-content: center;
 
-  margin-bottom: 80px;
+  padding-bottom: 80px;
 }
 .wave-planes {
   position: relative;

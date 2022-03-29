@@ -23,7 +23,7 @@
     </v-navigation-drawer>
     <v-app-bar app :flat="flat" class="nav-i" :class="{ expand: flat }">
       <v-toolbar-title>
-        <v-img src="@/assets/img/logo-lock.0508bfe3.webp" width="120px" class="logo-1 mr-16" />
+        <v-img src="@/assets/img/logo-lock.0508bfe3.webp" width="120px" class="logo-1 ml-10" />
         
       </v-toolbar-title>
       <v-spacer></v-spacer>
@@ -100,7 +100,7 @@ export default {
 <style>
 
 body.dark .nav-i {
-  background-color: #6200ff !important;
+  background-color: #2e2bff !important;
 }
 body.dark .nav-i span{
   color: #fff;
