@@ -1,5 +1,5 @@
-<template>
-  <div class="contenedor-plan">
+<template >
+  <div class="contenedor-plan" >
     <svg
       class="wave-planes"
       xmlns="http://www.w3.org/2000/svg"
@@ -11,6 +11,7 @@
         d="M0,256L24,250.7C48,245,96,235,144,224C192,213,240,203,288,170.7C336,139,384,85,432,90.7C480,96,528,160,576,192C624,224,672,224,720,197.3C768,171,816,117,864,117.3C912,117,960,171,1008,186.7C1056,203,1104,181,1152,154.7C1200,128,1248,96,1296,90.7C1344,85,1392,107,1416,117.3L1440,128L1440,0L1416,0C1392,0,1344,0,1296,0C1248,0,1200,0,1152,0C1104,0,1056,0,1008,0C960,0,912,0,864,0C816,0,768,0,720,0C672,0,624,0,576,0C528,0,480,0,432,0C384,0,336,0,288,0C240,0,192,0,144,0C96,0,48,0,24,0L0,0Z"
       ></path>
     </svg>
+    <h1 class="titulo-planes" id="planes">CONOCE NUESTROS PLANES</h1>
     <div class="tabla-comparativa">
       <article class="tabs-table">
         <div class="tabs-table">
@@ -189,16 +190,16 @@
               </tr>
               <tr>
                 <th>CONTROL DE ACCESO</th>
-                <td></td>
+                <td><img
+                    src="~@/assets/img/check-solid.svg"
+                    width="25px"
+                    alt=""
+                  /></td>
               </tr>
               <tr>
                 <th>GESTIÓN</th>
                 <td>
-                  <img
-                    src="~@/assets/img/check-solid.svg"
-                    width="25px"
-                    alt=""
-                  />
+                  
                 </td>
               </tr>
               <tr>
@@ -436,6 +437,12 @@ export default {};
   left: 0;
   top: 0;
 }
+.titulo-planes{
+  text-align: center;
+}
+body.dark .titulo-planes{
+  color: #fff;
+}
 body.dark .wave-planes path {
   fill: #0300c2;
 }
@@ -546,7 +553,7 @@ body.dark .normal-table .tag2 {
   font-weight: 700;
   margin: 1rem 0;
   font-size: 1.4rem;
-  color: orange;
+  color: #111;
 }
 .normal-table .linkprod {
   background-color: gold;

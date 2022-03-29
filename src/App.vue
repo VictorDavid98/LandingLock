@@ -11,6 +11,7 @@
       <Empresas />
       <!-- <Planes /> -->
       <Planes2 />
+      <Contacto />
 
     </v-main>
     <v-scale-transition>
@@ -43,6 +44,8 @@ import foote from "./components/Footer.vue";
 import Testimoniales from "./components/Testimoniales.vue";
 import Empresas from "./components/Empresas.vue";
 import Presentacion from "./components/Presentacion.vue";
+import Contacto from "./components/Contacto";
+
 
 
 export default {
@@ -59,6 +62,7 @@ export default {
     // Planes,
     Planes2,
     foote,
+    Contacto
 },
 
   data: () => ({

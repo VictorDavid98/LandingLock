@@ -3,7 +3,7 @@
     <div class="contenedor">
       <div class="content">
         <div class="centrar">
-          <h1 style="font-size: 35px;">La seguridad que necesitas</h1>
+          <h1 style="font-size: 35px">La seguridad que necesitas</h1>
           <p class="mt-8 justify">
             Perder no es sinónimo de fracasar, perder es aprender y de este
             aprendizaje nace el Lock, es por esto que al combinar nuestra
@@ -22,7 +22,11 @@
           </p>
         </div>
         <div class="centrar-2 mt-6">
-          <img src="../assets/img/undraw_secure_login_pdn4.svg" alt="" width="100%"/>
+          <img
+            src="../assets/img/undraw_secure_login_pdn4.svg"
+            alt=""
+            width="100%"
+          />
         </div>
       </div>
     </div>
@@ -39,7 +43,7 @@ export default {};
   background-color: #f3f3f3;
 }
 
-.justify{
+.justify {
   text-align: justify;
 }
 .contenedor {
@@ -48,9 +52,8 @@ export default {};
   justify-content: center;
   align-items: center;
   padding: 50px 0;
-  
 }
-body.dark .contenedor{
+body.dark .contenedor {
   background-color: #0300c2;
 }
 .content {
@@ -58,16 +61,16 @@ body.dark .contenedor{
   margin: 0;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap:40px;
+  gap: 40px;
   color: black;
   padding: 30px 30px;
 }
-body.dark .content{
+body.dark .content {
   color: #fff;
 }
 
-@media screen and (max-width: 968px){
-  .content{
+@media screen and (max-width: 968px) {
+  .content {
     display: flex;
     flex-direction: column;
     padding: 0;

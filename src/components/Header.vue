@@ -1,6 +1,6 @@
 <template>
-  <div id="header" >
-    <v-navigation-drawer v-model="drawer" app temporary >
+  <div id="header">
+    <v-navigation-drawer v-model="drawer" app temporary>
       <v-divider />
 
       <v-list dense>
@@ -23,8 +23,11 @@
     </v-navigation-drawer>
     <v-app-bar app :flat="flat" class="nav-i" :class="{ expand: flat }">
       <v-toolbar-title>
-        <v-img src="@/assets/img/logo-lock.0508bfe3.webp" width="120px" class="logo-1 ml-10" />
-        
+        <v-img
+          src="@/assets/img/logo-lock.0508bfe3.webp"
+          width="120px"
+          class="logo-1"
+        />
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-app-bar-nav-icon
@@ -34,16 +37,19 @@
       />
       <div v-else>
         <v-btn text @click="$vuetify.goTo('#hero')">
-          <span class="mr-3">Home</span>
+          <span class="mr-3">Inicio</span>
         </v-btn>
         <v-btn text @click="$vuetify.goTo('#about')">
-          <span class="mr-3">Información</span>
+          <span class="mr-3">Sobre Nosotros</span>
         </v-btn>
-        <v-btn text @click="$vuetify.goTo('#plus')">
-          <span class="mr-3">Plus</span>
+        <v-btn text @click="$vuetify.goTo('#informacion')">
+          <span class="mr-3">Información</span>
         </v-btn>
         <v-btn text @click="$vuetify.goTo('#planes')">
           <span class="mr-3">Planes</span>
+        </v-btn>
+        <v-btn text @click="$vuetify.goTo('#contacto')">
+          <span class="mr-3">Contacto</span>
         </v-btn>
       </div>
       <button class="switch" id="switch">
@@ -98,14 +104,12 @@ export default {
 </script>
 
 <style>
-
 body.dark .nav-i {
   background-color: #2e2bff !important;
 }
-body.dark .nav-i span{
+body.dark .nav-i span {
   color: #fff;
 }
-
 
 .nav-i .switch {
   background: #343d5b;

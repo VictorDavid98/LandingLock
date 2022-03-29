@@ -22,7 +22,12 @@
               </div>
               <div class="parte2">
                 <div>
-                  <img :src="testimonio.iconoEmpresa" width="100px" height="43px" alt="" />
+                  <img
+                    :src="testimonio.iconoEmpresa"
+                    width="auto"
+                    height="45px"
+                    alt=""
+                  />
                   <p class="nombre">{{ testimonio.nombre }}</p>
                   <p>
                     {{ testimonio.cargo }} -
@@ -36,8 +41,6 @@
         </v-sheet>
       </v-carousel-item>
     </v-carousel>
-
-    
   </div>
 </template>
 
@@ -70,10 +73,10 @@ export default {
         },
         {
           id: 3,
-          nombre: "Nicolas Osorio",
-          iconoEmpresa: require("@/assets/img/empresas-logos/logo-nestle.png"),
+          nombre: "Javier Alvarado",
+          iconoEmpresa: require("@/assets/img/empresas-logos/logo-hites.png"),
           cargo: "Director de Calidad",
-          empresa: "Nestle",
+          empresa: "Hites",
           mensaje:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et sodales ex. Quisque pretium, neque vitae dapibus mollis, risus metus vestibulum mi, ut gravida odio diam cursus erat. Nulla facilisi. Donec aliquam nibh et nulla suscipit pellentesque. Suspendisse turpis sapien, interdum eget ex non, volutpat mollis erat. Vivamus vestibulum enim sed erat tincidunt, in commodo risus sagittis. Quisque tempor felis sed ornare efficitur.",
         },
@@ -90,7 +93,6 @@ export default {
 }
 body.dark .contenedor-c {
   background-color: #0300c2;
-  
 }
 .c-testimonio {
   width: 85%;

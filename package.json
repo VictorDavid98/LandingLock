@@ -12,6 +12,7 @@
     "roboto-fontface": "*",
     "vue": "^2.6.11",
     "vue-youtube-embed": "^2.2.2",
+    "vuelidate": "^0.7.7",
     "vuetify": "^2.6.0"
   },
   "devDependencies": {
