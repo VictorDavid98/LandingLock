@@ -12,8 +12,10 @@
       ></path>
     </svg>
     <section class="c-contenido" id="informacion">
-      <div class="texto-content">
-        <h1 class="mt-10 mb-10">caracteristica 1</h1>
+      <div class="texto-content" data-aos="fade-up" data-aos-duration="2000">
+        <h1 class="mt-10 mb-10">
+          caracteristica 1
+        </h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
           sapiente ex sunt voluptatem est pariatur aspernatur doloremque
@@ -44,7 +46,7 @@
       <div class="img-p">
         <img src="@/assets/img/mockups-2.png" width="50%" alt="" />
       </div>
-      <div class="texto-content">
+      <div class="texto-content" data-aos="fade-up" data-aos-duration="2000">
         <h1 class="mt-10 mb-10">caracteristica 2</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
@@ -69,7 +71,7 @@
 
     <!-- ********************************************************** -->
     <section class="c-contenido">
-      <div class="texto-content">
+      <div class="texto-content" data-aos="fade-up" data-aos-duration="2000">
         <h1 class="mt-10 mb-10">caracteristica 3</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
@@ -166,8 +168,8 @@ body.dark .c-presentacion {
   }
 }
 .texto-content p {
-    text-align: justify;
-  }
+  text-align: justify;
+}
 body.dark .c-contenido {
   background-color: #2e2bff;
 }

@@ -54,6 +54,7 @@
         </form>
       </div>
     </div>
+      
   </div>
 </template>
 
@@ -150,7 +151,10 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 100px;
+  padding-bottom: 100px;
+}
+body.dark .contenedor-contacto {
+  background-color: #020085;
 }
 .contacto {
   width: 50%;
@@ -161,7 +165,7 @@ export default {
   box-shadow: 0 0 25px 0 rgb(59, 59, 59);
 }
 body.dark .contacto {
-  background-color: orange;
+  background-color: #ff8800;
   box-shadow: 0 0 25px 0 rgb(255, 187, 0);
 }
 @media screen and (max-width: 768px) {

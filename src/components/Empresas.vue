@@ -3,7 +3,8 @@
     <div class="text-titulo">
       <h1 class="text-center mt-16 mb-16">EMPRESAS CON LAS QUE TRABAJAMOS</h1>
     </div>
-    <div class="logos-empresas">
+    <div class="logos-empresas" data-aos="fade-up"
+     data-aos-duration="2000">
       <img
         class="img-logo"
         src="@/assets/img/empresas-logos/logo-falabella.png"

@@ -66,11 +66,11 @@ export default {
     drawer: null,
     isXs: false,
     items: [
-      ["mdi-home-outline", "Hom", "#hero"],
-      ["mdi-information-outline", "About", "#about"],
-      ["mdi-web", "Plus", "#plus"],
+      ["mdi-home-outline", "Inicio", "#hero"],
+      ["mdi-information-outline", "Sobre Nosotros", "#about"],
+      ["mdi-web", "Información", "#informacion"],
       ["mdi-currency-usd", "Planes", "#planes"],
-      ["mdi-email-outline", "Contacto", ""],
+      ["mdi-email-outline", "Contacto", "#contacto"],
     ],
   }),
   props: {
