@@ -65,7 +65,7 @@ export default {
         {
           id: 2,
           nombre: "Josefa Campos",
-          iconoEmpresa: require("@/assets/img/empresas-logos/logo-falabella.png"),
+          iconoEmpresa: require("@/assets/img/empresas-logos/logo-falabella.webp"),
           cargo: "Product Manager",
           empresa: "Falabella",
           mensaje:
@@ -74,7 +74,7 @@ export default {
         {
           id: 3,
           nombre: "Javier Alvarado",
-          iconoEmpresa: require("@/assets/img/empresas-logos/logo-hites.png"),
+          iconoEmpresa: require("@/assets/img/empresas-logos/logo-hites.webp"),
           cargo: "Director de Calidad",
           empresa: "Hites",
           mensaje:

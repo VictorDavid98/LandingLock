@@ -48,9 +48,11 @@ import Contacto from "./components/Contacto";
 
 
 
+
+
 export default {
   name: "App",
-
+  
   components: {
     Header,
     HomeSection,

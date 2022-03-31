@@ -12,7 +12,7 @@
       ></path>
     </svg>
     <section class="c-contenido" id="informacion">
-      <div class="texto-content" data-aos="fade-up" data-aos-duration="2000">
+      <div class="texto-content" data-aos="fade-up" data-aos-duration="3000">
         <h1 class="mt-10 mb-10">
           caracteristica 1
         </h1>
@@ -36,7 +36,7 @@
         </v-btn>
       </div>
       <div class="img-p">
-        <img src="@/assets/img/mockups-6.png" width="100%" alt="" />
+        <img src="@/assets/img/mockups-6.webp" width="100%" alt="" />
       </div>
     </section>
 
@@ -44,9 +44,9 @@
 
     <section class="c-contenido2">
       <div class="img-p">
-        <img src="@/assets/img/mockups-2.png" width="50%" alt="" />
+        <img src="@/assets/img/mockups-2.webp" width="50%" alt="" />
       </div>
-      <div class="texto-content" data-aos="fade-up" data-aos-duration="2000">
+      <div class="texto-content" data-aos="fade-up" data-aos-duration="3000">
         <h1 class="mt-10 mb-10">caracteristica 2</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
@@ -71,7 +71,7 @@
 
     <!-- ********************************************************** -->
     <section class="c-contenido">
-      <div class="texto-content" data-aos="fade-up" data-aos-duration="2000">
+      <div class="texto-content" data-aos="fade-up" data-aos-duration="3000">
         <h1 class="mt-10 mb-10">caracteristica 3</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
@@ -93,7 +93,7 @@
         </v-btn>
       </div>
       <div class="img-p">
-        <img src="@/assets/img/mockups-7.png" width="100%" alt="" />
+        <img src="@/assets/img/mockups-7.webp" width="100%" alt="" />
       </div>
     </section>
     <svg

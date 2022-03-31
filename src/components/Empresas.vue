@@ -4,37 +4,37 @@
       <h1 class="text-center mt-16 mb-16">EMPRESAS CON LAS QUE TRABAJAMOS</h1>
     </div>
     <div class="logos-empresas" data-aos="fade-up"
-     data-aos-duration="2000">
+     data-aos-duration="3000">
       <img
         class="img-logo"
-        src="@/assets/img/empresas-logos/logo-falabella.png"
+        src="@/assets/img/empresas-logos/logo-falabella.webp"
         alt=""
       />
       <img
         class="img-logo"
-        src="@/assets/img/empresas-logos/logo-adidas.png"
+        src="@/assets/img/empresas-logos/logo-adidas.webp"
         alt=""
       />
       <img
         class=""
-        src="@/assets/img/empresas-logos/logo-apple.png"
+        src="@/assets/img/empresas-logos/logo-apple.webp"
         width="40%"
         style="margin: 0 auto"
         alt=""
       />
       <img
         class="img-logo"
-        src="@/assets/img/empresas-logos/logo-hites.png"
+        src="@/assets/img/empresas-logos/logo-hites.webp"
         alt=""
       />
       <img
         class="img-logo"
-        src="@/assets/img/empresas-logos/logo-lg.png"
+        src="@/assets/img/empresas-logos/logo-lg.webp"
         alt=""
       />
       <img
         class="img-logo"
-        src="@/assets/img/empresas-logos/logo-nestle.png"
+        src="@/assets/img/empresas-logos/logo-nestle.webp"
         alt=""
       />
     </div>

@@ -24,7 +24,7 @@
           <v-text-field
             v-model="telefono"
             :error-messages="telefonoErrors"
-            label="Telefono (Ej: 9-42748929)"
+            label="Teléfono"
             required
             @input="$v.telefono.$touch()"
             @blur="$v.telefono.$touch()"
@@ -54,7 +54,6 @@
         </form>
       </div>
     </div>
-      
   </div>
 </template>
 
