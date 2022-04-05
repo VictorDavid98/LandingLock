@@ -5,6 +5,8 @@ import 'roboto-fontface/css/roboto/roboto-fontface.css'
 import '@mdi/font/css/materialdesignicons.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import VueTextareaAutosize from 'vue-textarea-autosize';
+
 
 Vue.config.productionTip = false
 

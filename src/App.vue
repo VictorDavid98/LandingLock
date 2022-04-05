@@ -34,6 +34,8 @@
 </template>
 
 <script>
+import Vue from "vue"
+import { onMounted} from "vue"
 import Header from "./components/Header.vue";
 import HomeSection from "./components/HomeSection";
 import About from "./components/About.vue";
@@ -45,14 +47,22 @@ import Testimoniales from "./components/Testimoniales.vue";
 import Empresas from "./components/Empresas.vue";
 import Presentacion from "./components/Presentacion.vue";
 import Contacto from "./components/Contacto";
+import { auth } from "./utils/firebase";
 
 
 
+console.log("hola mundo");
 
 
 export default {
   name: "App",
   
+  setup() {
+    console.log("hola mundo");
+    onMounted(() => {
+      console.log("hola mundo");
+    })
+  },
   components: {
     Header,
     HomeSection,
