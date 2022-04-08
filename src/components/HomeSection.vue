@@ -146,9 +146,16 @@
 
 <script>
 import { setTimeout } from "timers";
+// import { database, coleccion} from '../utils/firebase'
+
 export default {
   data() {
     return {
+      //firebase
+      titulo1: null,
+      subtitulo: null,
+
+      //typed
       typeValue: "",
       typeStatus: false,
       typeArray: ["Intuitiva", "efectiva", "adaptable"],
@@ -179,6 +186,11 @@ export default {
       ],
     };
   },
+  // mounted(){
+  //   this.hero=[]
+  //   coleccion.get()
+  //     .then( (r).docs.map( (item) => this.hero.push({titulo1:item.titulo1})))
+  // },
   watch: {
     dialog(value) {
       if (!value) {
@@ -187,19 +199,19 @@ export default {
     },
   },
   methods: {
-    ready(event) {
-      this.player = event.target;
-    },
-    playing(event) {},
-    change() {
-      this.videoId = "http://player.vimeo.com/video/525764495";
-    },
-    stop() {
-      this.player.stopVideo();
-    },
-    pause() {
-      this.player.pauseVideo();
-    },
+    // ready(event) {
+    //   this.player = event.target;
+    // },
+    // playing(event) {},
+    // change() {
+    //   this.videoId = "http://player.vimeo.com/video/525764495";
+    // },
+    // stop() {
+    //   this.player.stopVideo();
+    // },
+    // pause() {
+    //   this.player.pauseVideo();
+    // },
     typeText() {
       if (this.charIndex < this.typeArray[this.typeArrayIndex].length) {
         if (!this.typeStatus) this.typeStatus = true;

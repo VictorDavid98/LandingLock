@@ -1,25 +1,21 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getDatabase } from "firebase/database";
-import { getAuth } from "firebase/auth";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getFirestore } from "firebase/firestore";
+import { collection, addDoc } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBJaygqWSyuXlbYSNTRdoWqXcAL3ymuyxM",
-  authDomain: "lock-landing-page.firebaseapp.com",
-  projectId: "lock-landing-page",
-  storageBucket: "lock-landing-page.appspot.com",
-  messagingSenderId: "187772061402",
-  appId: "1:187772061402:web:c042e7656f5a8ad08d07e3"
+  apiKey: "AIzaSyClyvgV2UpAswd5HPFFL7EphA0h2hcStV4",
+  authDomain: "lock-landing.firebaseapp.com",
+  projectId: "lock-landing",
+  storageBucket: "lock-landing.appspot.com",
+  messagingSenderId: "578053925621",
+  appId: "1:578053925621:web:4071071e7eb0c65053f3bc"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
-export const database = getDatabase(app);
+export default db;
 
-const auth = getAuth();
-
-export { auth };

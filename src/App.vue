@@ -12,7 +12,6 @@
       <!-- <Planes /> -->
       <Planes2 />
       <Contacto />
-
     </v-main>
     <v-scale-transition>
       <v-btn
@@ -34,8 +33,6 @@
 </template>
 
 <script>
-import Vue from "vue"
-import { onMounted} from "vue"
 import Header from "./components/Header.vue";
 import HomeSection from "./components/HomeSection";
 import About from "./components/About.vue";
@@ -47,21 +44,18 @@ import Testimoniales from "./components/Testimoniales.vue";
 import Empresas from "./components/Empresas.vue";
 import Presentacion from "./components/Presentacion.vue";
 import Contacto from "./components/Contacto";
-import { auth } from "./utils/firebase";
+
+//firebase
+import db from './utils/firebase'
+import { collection, getDocs } from "firebase/firestore";
 
 
-
-console.log("hola mundo");
 
 
 export default {
   name: "App",
-  
-  setup() {
-    console.log("hola mundo");
-    onMounted(() => {
-      console.log("hola mundo");
-    })
+  data() {
+
   },
   components: {
     Header,
@@ -74,10 +68,17 @@ export default {
     // Planes,
     Planes2,
     foote,
-    Contacto
-},
+    Contacto,
+  },
 
   data: () => ({
+    return: {
+      newInicio: {
+        titulo1: '',
+        titulo2: '',
+        titulo3: ''
+      }
+    },
     fab: null,
     color: "",
     flat: null,
@@ -117,10 +118,10 @@ export default {
 </script>
 
 <style scoped>
-.fondo{
+.fondo {
   background-color: #fff;
 }
-body.dark .fondo{
+body.dark .fondo {
   background-color: #2e2bff;
 }
 </style>
