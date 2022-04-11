@@ -1,40 +1,39 @@
 <template>
   <section id="about">
-    <div class="contenedor">
-      <div class="content">
-        <div class="centrar">
-          <h1 style="font-size: 35px">La seguridad que necesitas</h1>
-          <p class="mt-8 justify">
-            Perder no es sinónimo de fracasar, perder es aprender y de este
-            aprendizaje nace el Lock, es por esto que al combinar nuestra
-            experiencia con un equipo de soporte y desarrolladores altamente
-            capacitados nos lleva a idear y diseñar un sistema que responde a
-            las necesidades y requerimientos actuales, Lock te entregará la
-            tranquilidad de saber que tus recursos están correctamente
-            administrados.
-          </p>
-          <p class="justify">
-            Apoya el trabajo del personal de seguridad y su gestión de
-            administración, LOCK es una plataforma flexible, programable y
-            adaptable a las necesidades particulares de cada usuario hoy más que
-            nunca la seguridad se ha transformado en una necesidad y un anhelo
-            para todos.
-          </p>
-        </div>
-        <div class="centrar-2 mt-6">
-          <img
-            src="../assets/img/undraw_secure_login_pdn4.svg"
-            alt=""
-            width="100%"
-          />
+    
+      <div class="contenedor">
+        <div class="content">
+          <div class="centrar" v-for="a in sobre" :key="a.id">
+            <h1 style="font-size: 35px">{{ a.titulo }}</h1>
+            <p class="mt-8 justify">
+              {{ a.descripcion }}
+            </p>
+          </div>
+          <div class="centrar-2 mt-6">
+            <img
+              src="../assets/img/undraw_secure_login_pdn4.svg"
+              alt=""
+              width="100%"
+            />
+          </div>
         </div>
       </div>
-    </div>
+  
   </section>
 </template>
 
 <script>
-export default {};
+import { db } from "../firebase/db";
+export default {
+  data() {
+    return{
+      sobre: []
+    }
+  },
+  firestore: {
+    sobre: db.collection("about"),
+  },
+};
 </script>
 
 <style scoped>

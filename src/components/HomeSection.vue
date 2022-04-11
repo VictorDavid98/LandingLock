@@ -1,14 +1,12 @@
 <template>
   <section id="hero">
-    <div class="background-i">
+    <div v-for="h in hero" :key="h.id">
+    <div class="background-i" >
       <div class="content-hero">
-        <div class="content">
-          <h1 class="titulo mb-5">LOCK Seguridad</h1>
+        <div class="content" >
+          <h1 class="titulo mb-5">{{ h.titulo1 }}</h1>
           <h1 class="subtitulo">
-            Porque sabemos que la seguridad es indispensable hoy en dia, te
-            presentamos
-            <span class="font-weight-bold">LOCK</span> una innovadora
-            herramienta de gestión y control integral de seguridad que es
+            {{h.subtitulo}}
             <span class="typed-text font-weight-bold">{{ typeValue }}</span>
             <span class="cursor" :class="{ typing: typeStatus }">&nbsp;</span>
           </h1>
@@ -21,7 +19,7 @@
               @click="$vuetify.goTo('#features')"
               class="mt-7 mr-2"
             >
-              Ver más...
+              {{h.boton1}}
               <v-icon class="ml-2">mdi-arrow-down</v-icon>
             </v-btn>
 
@@ -33,7 +31,7 @@
               @click.stop="dialog = true"
               class="mt-7 playBut"
             >
-              Ver Video
+              {{h.boton2}}
               <svg
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
@@ -91,7 +89,9 @@
         width="500"
         height="281"
         frameborder="0"
-        webkitAllowFullScreen mozallowfullscreen allowFullScreen
+        webkitAllowFullScreen
+        mozallowfullscreen
+        allowFullScreen
       ></iframe>
     </v-dialog>
 
@@ -103,7 +103,7 @@
           <v-row align="center" justify="space-around">
             <v-col cols="12" class="text-center">
               <h1 class="font-weight-light display-2 mb-6">
-                Conoce las funciones de LOCK
+                {{ h.titulo2 }}
               </h1>
               <!-- <h1 class="font-weight-light" align="left">
                 Lock es una innovadora herramienta los sistemas de rondas,
@@ -141,35 +141,22 @@
         </v-col>
       </v-row>
     </v-container>
+    </div>
   </section>
 </template>
 
 <script>
 import { setTimeout } from "timers";
-// import { database, coleccion} from '../utils/firebase'
+import { db } from "../firebase/db";
 
 export default {
   data() {
     return {
       //firebase
-      titulo1: null,
-      subtitulo: null,
-
-      //typed
-      typeValue: "",
-      typeStatus: false,
-      typeArray: ["Intuitiva", "efectiva", "adaptable"],
-      typingSpeed: 50,
-      erasingSpeed: 100,
-      newTextDelay: 2000,
-      typeArrayIndex: 0,
-      charIndex: 0,
-
-      dialog: false,
-      videoId: "i8IvvHJssWE",
+      hero: [],
       features: [
         {
-          img: require("@/assets/img/sistema-de-seguridad.ea1d6f00.webp"),
+          img: require ("@/assets/img/sistema-de-seguridad.ea1d6f00.webp"),
           title: "Sistema de Rondas",
           text: "El sistema permite supervisar las rondas realizadas por personal de seguridad utilizando tecnología NFC teniendo la información en detalle de forma rápida y en línea.",
         },
@@ -184,13 +171,22 @@ export default {
           text: "Agilizar y automatizar los procesos de gestión, permitiendo tomar mejores decisiones en el momento adecuado. LOCK te proporciona toda la información de forma rápida y efectiva.",
         },
       ],
+
+      //typed
+      typeValue: "",
+      typeStatus: false,
+      typeArray: ["Intuitiva", "efectiva", "adaptable"],
+      typingSpeed: 50,
+      erasingSpeed: 100,
+      newTextDelay: 2000,
+      typeArrayIndex: 0,
+      charIndex: 0,
+
+      dialog: false,
+      videoId: "i8IvvHJssWE",
     };
   },
-  // mounted(){
-  //   this.hero=[]
-  //   coleccion.get()
-  //     .then( (r).docs.map( (item) => this.hero.push({titulo1:item.titulo1})))
-  // },
+
   watch: {
     dialog(value) {
       if (!value) {
@@ -199,19 +195,6 @@ export default {
     },
   },
   methods: {
-    // ready(event) {
-    //   this.player = event.target;
-    // },
-    // playing(event) {},
-    // change() {
-    //   this.videoId = "http://player.vimeo.com/video/525764495";
-    // },
-    // stop() {
-    //   this.player.stopVideo();
-    // },
-    // pause() {
-    //   this.player.pauseVideo();
-    // },
     typeText() {
       if (this.charIndex < this.typeArray[this.typeArrayIndex].length) {
         if (!this.typeStatus) this.typeStatus = true;
@@ -250,6 +233,11 @@ export default {
   },
   created() {
     setTimeout(this.typeText, this.newTextDelay + 200);
+  },
+  firestore: {
+    hero: db.collection("hero"),
+    funciones: db.collection("funciones"),
+    lock: db.collection("lock"),
   },
 };
 </script>
@@ -339,7 +327,7 @@ span.cursor.typing {
 .btn-play {
   transition: 0.2s;
 }
-.justify{
+.justify {
   text-align: justify;
 }
 .svg-border-waves .v-image {
@@ -421,7 +409,7 @@ section {
 .subtitulo {
   font-weight: 300;
 }
-.img{
+.img {
   display: flex;
   justify-content: flex-end;
 }
@@ -433,7 +421,7 @@ section {
   }
   .content {
     width: 90%;
-    
+
     text-align: justify;
     display: flex;
     flex-direction: column;
@@ -452,7 +440,6 @@ section {
     width: 70%;
     display: flex;
     flex-direction: column;
-    
   }
   .img {
     display: none;

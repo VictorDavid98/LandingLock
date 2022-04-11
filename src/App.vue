@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <header :flat="flat" />
-    <v-main class="pt-0 fondo">
+    <div class="pt-0 fondo">
       <Header />
       <HomeSection />
       <About />
@@ -12,7 +12,7 @@
       <!-- <Planes /> -->
       <Planes2 />
       <Contacto />
-    </v-main>
+    </div>
     <v-scale-transition>
       <v-btn
         fab
@@ -45,18 +45,10 @@ import Empresas from "./components/Empresas.vue";
 import Presentacion from "./components/Presentacion.vue";
 import Contacto from "./components/Contacto";
 
-//firebase
-import db from './utils/firebase'
-import { collection, getDocs } from "firebase/firestore";
-
-
-
-
 export default {
   name: "App",
-  data() {
 
-  },
+  data() {},
   components: {
     Header,
     HomeSection,
@@ -72,13 +64,6 @@ export default {
   },
 
   data: () => ({
-    return: {
-      newInicio: {
-        titulo1: '',
-        titulo2: '',
-        titulo3: ''
-      }
-    },
     fab: null,
     color: "",
     flat: null,
