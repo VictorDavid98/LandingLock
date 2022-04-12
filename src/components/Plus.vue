@@ -1,7 +1,7 @@
 <template>
   <section id="plus">
     <v-container fluid>
-      <v-row align="center" justify="center">
+      <v-row align="center" justify="center" v-for="p in plus" :key="p.id">
         <v-col cols="10">
           <v-row align="center" justify="center">
             <v-col sm="4" class="hidden-xs-only">
@@ -14,9 +14,9 @@
             <v-col cols="12" sm="8" class="white--text text-left">
               
               <h1 class="font-weight-bold mt-8">
-                Solución y Tranquilidad en tus manos.
+                {{p.texto1}}
                 <br />
-                Te invitamos a registrarte...
+                {{p.texto2}}
               </h1>
               <v-btn
                 rounded
@@ -28,7 +28,7 @@
                 class="mt-4"
               >
                 <v-icon class="mr-2"> mdi-web </v-icon>
-                Visitanos
+                {{p.boton}}
               </v-btn>
             </v-col>
           </v-row>
@@ -39,7 +39,17 @@
 </template>
 
 <script>
-export default {};
+import { db } from "../firebase/db";
+export default {
+  data() {
+    return{
+      plus: []
+    }
+  },
+  firestore: {
+    plus: db.collection("plus"),
+  },
+};
 </script>
 
 <style scoped>

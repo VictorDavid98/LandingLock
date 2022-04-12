@@ -1,5 +1,6 @@
 <template>
-  <section class="c-presentacion">
+  <div class="c-presentacion">
+    <div v-for="p in presentacion" :key="p.id">
     <svg
       class="wave-p"
       xmlns="http://www.w3.org/2000/svg"
@@ -11,16 +12,13 @@
         d="M0,64L24,74.7C48,85,96,107,144,144C192,181,240,235,288,224C336,213,384,139,432,117.3C480,96,528,128,576,165.3C624,203,672,245,720,240C768,235,816,181,864,176C912,171,960,213,1008,213.3C1056,213,1104,171,1152,154.7C1200,139,1248,149,1296,144C1344,139,1392,117,1416,106.7L1440,96L1440,0L1416,0C1392,0,1344,0,1296,0C1248,0,1200,0,1152,0C1104,0,1056,0,1008,0C960,0,912,0,864,0C816,0,768,0,720,0C672,0,624,0,576,0C528,0,480,0,432,0C384,0,336,0,288,0C240,0,192,0,144,0C96,0,48,0,24,0L0,0Z"
       ></path>
     </svg>
-    <section class="c-contenido" id="informacion">
+    <section class="c-contenido" id="informacion" >
       <div class="texto-content" data-aos="fade-up" data-aos-duration="3000">
         <h1 class="mt-10 mb-10">
-          caracteristica 1
+          {{p.titulo1}}
         </h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
-          sapiente ex sunt voluptatem est pariatur aspernatur doloremque
-          accusantium quia, praesentium nisi earum debitis corporis tempora
-          distinctio, quas natus. Ipsa, quas?
+          {{p.descripcion1}}
         </p>
         <v-btn
           rounded
@@ -32,7 +30,7 @@
           class="mt-4"
         >
           <v-icon class="mr-2"> mdi-web </v-icon>
-          Visitanos
+          {{p.boton1}}
         </v-btn>
       </div>
       <div class="img-p">
@@ -47,12 +45,9 @@
         <img src="@/assets/img/mockups-2.webp" width="50%" alt="" />
       </div>
       <div class="texto-content" data-aos="fade-up" data-aos-duration="3000">
-        <h1 class="mt-10 mb-10">caracteristica 2</h1>
+        <h1 class="mt-10 mb-10">{{p.titulo2}}</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
-          sapiente ex sunt voluptatem est pariatur aspernatur doloremque
-          accusantium quia, praesentium nisi earum debitis corporis tempora
-          distinctio, quas natus. Ipsa, quas?
+          {{p.descripcion2}}
         </p>
         <v-btn
           rounded
@@ -64,7 +59,7 @@
           class="mt-4"
         >
           <v-icon class="mr-2"> mdi-web </v-icon>
-          Visitanos
+          {{p.boton2}}
         </v-btn>
       </div>
     </section>
@@ -72,12 +67,9 @@
     <!-- ********************************************************** -->
     <section class="c-contenido">
       <div class="texto-content" data-aos="fade-up" data-aos-duration="3000">
-        <h1 class="mt-10 mb-10">caracteristica 3</h1>
+        <h1 class="mt-10 mb-10">{{p.titulo3}}</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
-          sapiente ex sunt voluptatem est pariatur aspernatur doloremque
-          accusantium quia, praesentium nisi earum debitis corporis tempora
-          distinctio, quas natus. Ipsa, quas?
+          {{p.descripcion3}}
         </p>
         <v-btn
           rounded
@@ -89,7 +81,7 @@
           class="mt-4"
         >
           <v-icon class="mr-2"> mdi-web </v-icon>
-          Visitanos
+          {{p.boton3}}
         </v-btn>
       </div>
       <div class="img-p">
@@ -107,12 +99,21 @@
         d="M0,64L24,74.7C48,85,96,107,144,144C192,181,240,235,288,224C336,213,384,139,432,117.3C480,96,528,128,576,165.3C624,203,672,245,720,240C768,235,816,181,864,176C912,171,960,213,1008,213.3C1056,213,1104,171,1152,154.7C1200,139,1248,149,1296,144C1344,139,1392,117,1416,106.7L1440,96L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z"
       ></path>
     </svg>
-  </section>
+    </div>
+  </div>
 </template>
 
 <script>
+import { db } from "../firebase/db";
 export default {
-  setup() {},
+  data() {
+    return{
+      presentacion: []
+    }
+  },
+  firestore: {
+    presentacion: db.collection("presentacion"),
+  },
 };
 </script>
 <style scoped>
