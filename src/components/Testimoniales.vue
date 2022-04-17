@@ -88,11 +88,11 @@ export default {
 
 <style>
 .contenedor-c {
-  margin-top: 50px;
+ 
   background-color: #f3f3f3;
 }
 body.dark .contenedor-c {
-  background-color: #0300c2;
+  background-color: #0400ff;
 }
 .c-testimonio {
   width: 85%;
@@ -105,7 +105,8 @@ body.dark .contenedor-c {
   display: flex;
 }
 body.dark .c-testimonio {
-  background-color: #2e2bff;
+   background: rgb(0,130,255);
+background: linear-gradient(90deg, rgba(0,130,255,1) 0%, rgba(0,100,255,1) 100%);
   color: #fff;
   box-shadow: 0 0 15px 0 rgba(255, 255, 255, 0.5);
 }
@@ -140,7 +141,7 @@ body.dark .c-testimonio {
   margin-bottom: -10px;
 }
 body.dark .wave-empresas path {
-  fill: #0300c2;
+  fill: #0400ff;
 }
 @media screen and (max-width: 768px) {
   .c-testimonio {

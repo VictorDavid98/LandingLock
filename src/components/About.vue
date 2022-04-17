@@ -74,7 +74,8 @@ export default {
 <style scoped>
 #about {
   margin-top: 100px;
-  background-color: #f3f3f3;
+  background: rgb(254,254,254);
+background: linear-gradient(93deg, rgba(254,254,254,1) 0%, rgba(182,192,195,1) 100%);
 }
 .input-m {
   color: black;
@@ -92,7 +93,8 @@ export default {
   padding: 50px 0;
 }
 body.dark .contenedor {
-  background-color: #0300c2;
+  background: rgb(0,130,255);
+background: linear-gradient(90deg, rgba(0,130,255,1) 0%, rgba(0,100,255,1) 100%);
 }
 .content {
   width: 75%;

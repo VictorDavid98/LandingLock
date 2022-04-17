@@ -43,17 +43,16 @@
                 class="mt-4"
               >
                 <v-icon class="mr-2"> mdi-web </v-icon>
-                {{ p.boton
-                }}
+                {{ p.boton }}
               </v-btn>
               <v-btn
-                  icon
-                  outlined
-                  dark
-                  style="border: none"
-                  @click.stop="modificarBtn = true"
-                  ><v-icon>mdi-pencil</v-icon></v-btn
-                >
+                icon
+                outlined
+                dark
+                style="border: none"
+                @click.stop="modificarBtn = true"
+                ><v-icon>mdi-pencil</v-icon></v-btn
+              >
             </v-col>
           </v-row>
         </v-col>

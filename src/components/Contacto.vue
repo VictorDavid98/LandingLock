@@ -151,9 +151,12 @@ export default {
   justify-content: center;
   align-items: center;
   padding-bottom: 100px;
+  background: rgb(254,254,254);
+background: linear-gradient(93deg, rgba(254,254,254,1) 0%, rgba(182,192,195,1) 100%);
 }
 body.dark .contenedor-contacto {
-  background-color: #020085;
+  background: rgb(0,130,255);
+background: linear-gradient(90deg, rgba(0,130,255,1) 0%, rgba(0,100,255,1) 100%);
 }
 .contacto {
   width: 50%;
@@ -164,7 +167,8 @@ body.dark .contenedor-contacto {
   box-shadow: 0 0 25px 0 rgb(59, 59, 59);
 }
 body.dark .contacto {
-  background-color: #ff8800;
+  background: rgb(255,148,0);
+background: linear-gradient(90deg, rgba(255,148,0,1) 0%, rgba(252,237,69,1) 100%);
   box-shadow: 0 0 25px 0 rgb(255, 187, 0);
 }
 @media screen and (max-width: 768px) {

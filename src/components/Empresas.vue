@@ -59,7 +59,7 @@ export default {
   position: relative;
 }
 body.dark .contenedor-empresas {
-  background-color: #0300c2;
+  background-color: #0400ff;
 }
 body.dark .text-titulo {
   color: #fff;

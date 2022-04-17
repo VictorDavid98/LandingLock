@@ -530,10 +530,13 @@ span.cursor.typing {
   min-height: 300px;
   padding: 10px;
   transition: 0.5s ease-out;
+  background: rgb(254,254,254);
+
 }
 
 .card h1 {
   margin-bottom: 10px;
+  
 }
 
 .zoom-efect {
@@ -625,6 +628,7 @@ section {
   width: 100%;
   overflow: hidden;
   line-height: 0;
+  
 }
 
 .custom-shape-divider-bottom-1647534989 svg {
@@ -632,6 +636,7 @@ section {
   display: block;
   width: calc(200% + 1.3px);
   height: 150px;
+  
 }
 
 .custom-shape-divider-bottom-1647534989 .shape-fill {
@@ -648,7 +653,8 @@ body.dark #hero {
   background-color: #2e2bff;
 }
 body.dark .card {
-  background-color: #0300c2;
+  background: rgb(0,130,255);
+
   color: #fff;
 }
 .f-card {

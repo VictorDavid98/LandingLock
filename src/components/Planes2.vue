@@ -429,8 +429,13 @@ export default {};
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   padding-bottom: 80px;
+  background: rgb(254,254,254);
+background: linear-gradient(93deg, rgba(254,254,254,1) 0%, rgba(182,192,195,1) 100%);
+}
+body.dark .contenedor-plan{
+  background: rgb(0,130,255);
+background: linear-gradient(90deg, rgba(0,130,255,1) 0%, rgba(0,100,255,1) 100%);
 }
 .wave-planes {
   position: relative;
@@ -444,7 +449,7 @@ body.dark .titulo-planes{
   color: #fff;
 }
 body.dark .wave-planes path {
-  fill: #0300c2;
+  fill: #0400ff;
 }
 body.dark .contenedor-plan {
   background-color: #020085;
@@ -486,11 +491,13 @@ body.dark .tabla-comparativa {
   display: none;
 }
 .normal-table td:nth-child(3) {
-  background-color: #2e2bff;
+  background: rgb(0,18,255);
+background: linear-gradient(90deg, rgba(0,18,255,1) 0%, rgba(85,89,255,1) 100%);
   color: #fff;
 }
 body.dark .normal-table td:nth-child(3) {
-  background-color: #ff8800;
+  background: rgb(255,148,0);
+background: linear-gradient(90deg, rgba(255,148,0,1) 0%, rgba(252,237,69,1) 100%);
 }
 .normal-table {
   font-family: arial;
