@@ -150,6 +150,32 @@
         <input type="text" v-model="boton2" class="input-m" />
         <v-btn color="orange" @click="updateHero(h.id)">Modificar</v-btn>
       </v-dialog>
+      <!--  -->
+      <v-dialog v-model="modificarTitulo3" width="600px">
+        <input type="text" v-model="titulo3" class="input-m" />
+        <v-btn color="orange" @click="updateHero(h.id)">Modificar</v-btn>
+      </v-dialog>
+      <v-dialog v-model="modificarTitulo4" width="600px">
+        <input type="text" v-model="titulo4" class="input-m" />
+        <v-btn color="orange" @click="updateHero(h.id)">Modificar</v-btn>
+      </v-dialog>
+      <v-dialog v-model="modificarTitulo5" width="600px">
+        <input type="text" v-model="titulo5" class="input-m" />
+        <v-btn color="orange" @click="updateHero(h.id)">Modificar</v-btn>
+      </v-dialog>
+      <!--  -->
+      <v-dialog v-model="modificarSubtitulo3" width="600px">
+        <input type="text" v-model="subtitulo3" class="input-m" />
+        <v-btn color="orange" @click="updateHero(h.id)">Modificar</v-btn>
+      </v-dialog>
+      <v-dialog v-model="modificarSubtitulo4" width="600px">
+        <input type="text" v-model="subtitulo4" class="input-m" />
+        <v-btn color="orange" @click="updateHero(h.id)">Modificar</v-btn>
+      </v-dialog>
+      <v-dialog v-model="modificarSubtitulo5" width="600px">
+        <input type="text" v-model="subtitulo5" class="input-m" />
+        <v-btn color="orange" @click="updateHero(h.id)">Modificar</v-btn>
+      </v-dialog>
 
       <!-- ********************************************************************************* -->
 
@@ -163,24 +189,13 @@
                   <v-btn
                     icon
                     outlined
-                    dark
                     style="border: none"
                     @click.stop="modificarTitulo2 = true"
                     ><v-icon>mdi-pencil</v-icon></v-btn
                   >
                 </h1>
-                <!-- <h1 class="font-weight-light" align="left">
-                Lock es una innovadora herramienta los sistemas de rondas,
-                controles de acceso, seguridad en comunidades, condominios,
-              </h1> -->
               </v-col>
-              <v-col
-                cols="12"
-                sm="4"
-                class="text-center"
-                v-for="(feature, i) in features"
-                :key="i"
-              >
+              <div cols="12" sm="4" class="f-card">
                 <v-hover v-slot:default="{ hover }">
                   <v-card
                     class="card"
@@ -189,18 +204,104 @@
                     :class="{ up: hover }"
                   >
                     <v-img
-                      :src="feature.img"
+                      src="../assets/img/sistema-de-seguridad.ea1d6f00.webp"
                       max-width="100px"
                       class="d-block ml-auto mr-auto"
                       :class="{ 'zoom-efect': hover }"
                     ></v-img>
-                    <h1 class="font-weight-regular">{{ feature.title }}</h1>
+                    <h1 class="font-weight-regular">
+                      {{ h.titulo3 }}
+                      <v-btn
+                        icon
+                        outlined
+                        style="border: none"
+                        @click.stop="modificarTitulo3 = true"
+                        ><v-icon>mdi-pencil</v-icon></v-btn
+                      >
+                    </h1>
                     <h4 class="font-weight-regular subtitle-1 justify">
-                      {{ feature.text }}
+                      {{ h.subtitulo3 }}
+                      <v-btn
+                        icon
+                        outlined
+                        style="border: none"
+                        @click.stop="modificarSubtitulo3 = true"
+                        ><v-icon>mdi-pencil</v-icon></v-btn
+                      >
                     </h4>
                   </v-card>
                 </v-hover>
-              </v-col>
+                <v-hover v-slot:default="{ hover }">
+                  <v-card
+                    class="card"
+                    shape8
+                    :elevation="hover ? 8 : 4"
+                    :class="{ up: hover }"
+                  >
+                    <v-img
+                      src="../assets/img/sistema-de-seguridad.ea1d6f00.webp"
+                      max-width="100px"
+                      class="d-block ml-auto mr-auto"
+                      :class="{ 'zoom-efect': hover }"
+                    ></v-img>
+                    <h1 class="font-weight-regular">
+                      {{ h.titulo4 }}
+                      <v-btn
+                        icon
+                        outlined
+                        style="border: none"
+                        @click.stop="modificarTitulo4 = true"
+                        ><v-icon>mdi-pencil</v-icon></v-btn
+                      >
+                    </h1>
+                    <h4 class="font-weight-regular subtitle-1 justify">
+                      {{ h.subtitulo4 }}
+                      <v-btn
+                        icon
+                        outlined
+                        style="border: none"
+                        @click.stop="modificarSubtitulo4 = true"
+                        ><v-icon>mdi-pencil</v-icon></v-btn
+                      >
+                    </h4>
+                  </v-card>
+                </v-hover>
+                <v-hover v-slot:default="{ hover }">
+                  <v-card
+                    class="card"
+                    shape8
+                    :elevation="hover ? 8 : 4"
+                    :class="{ up: hover }"
+                  >
+                    <v-img
+                      src="../assets/img/sistema-de-seguridad.ea1d6f00.webp"
+                      max-width="100px"
+                      class="d-block ml-auto mr-auto"
+                      :class="{ 'zoom-efect': hover }"
+                    ></v-img>
+                    <h1 class="font-weight-regular">
+                      {{ h.titulo5 }}
+                      <v-btn
+                        icon
+                        outlined
+                        style="border: none"
+                        @click.stop="modificarTitulo5 = true"
+                        ><v-icon>mdi-pencil</v-icon></v-btn
+                      >
+                    </h1>
+                    <h4 class="font-weight-regular subtitle-1 justify">
+                      {{ h.subtitulo5 }}
+                      <v-btn
+                        icon
+                        outlined
+                        style="border: none"
+                        @click.stop="modificarSubtitulo5 = true"
+                        ><v-icon>mdi-pencil</v-icon></v-btn
+                      >
+                    </h4>
+                  </v-card>
+                </v-hover>
+              </div>
             </v-row>
           </v-col>
         </v-row>
@@ -208,46 +309,42 @@
     </div>
   </section>
 </template>
-
+<!-- ********************************************************************************* -->
 <script>
 import { setTimeout } from "timers";
 import { db } from "../firebase/db";
-
 export default {
   data() {
     return {
       //firebase
       hero: [],
-      titulo1: "Lock Gestión  de Seguridad ",
+      titulo1: "Lock Gestión de Seguridad",
       titulo2: "CONOCE LAS FUNCIONES DE LOCK",
+      titulo3: "Sistema de Rondas",
+      titulo4: "Control de Acceso",
+      titulo5: "Gestión",
       subtitulo:
         "Porque sabemos que la seguridad es indispensable hoy en día, te presentamos LOCK una innovadora herramienta tecnológica de gestión integral de seguridad que es",
+      subtitulo3:
+        "El sistema permite supervisar las rondas realizadas por personal de seguridad utilizando tecnología NFC teniendo la información en detalle de forma rápida y en línea.",
+      subtitulo4:
+        "Con LOCK puedes permitir o restringir la entrada de una persona o vehículo a las empresas, bodegas, condominios, etc. Consiguiendo una mejor organización y administración de recursos.",
+      subtitulo5:
+        "Agilizar y automatizar los procesos de gestión, permitiendo tomar mejores decisiones en el momento adecuado. LOCK te proporciona toda la información de forma rápida y efectiva.",
       boton1: "VER MÁS",
       boton2: "VER VIDEO",
       dialog: false,
       modificarTitulo: false,
       modificarTitulo2: false,
+      modificarTitulo3: false,
+      modificarTitulo4: false,
+      modificarTitulo5: false,
       modificarSubtitulo: false,
+      modificarSubtitulo3: false,
+      modificarSubtitulo4: false,
+      modificarSubtitulo5: false,
       modificarBtn1: false,
       modificarBtn2: false,
-      features: [
-        {
-          img: require("@/assets/img/sistema-de-seguridad.ea1d6f00.webp"),
-          title: "Sistema de Rondas",
-          text: "El sistema permite supervisar las rondas realizadas por personal de seguridad utilizando tecnología NFC teniendo la información en detalle de forma rápida y en línea.",
-        },
-        {
-          img: require("@/assets/img/frontera.cdc934da.webp"),
-          title: "Control de Acceso",
-          text: "Con LOCK puedes permitir o restringir la entrada de una persona o vehículo a las empresas, bodegas, condominios, etc. Consiguiendo una mejor organización y administración de recursos.",
-        },
-        {
-          img: require("@/assets/img/lista-de-verificacion.d5ba5e4d.webp"),
-          title: "Gestión",
-          text: "Agilizar y automatizar los procesos de gestión, permitiendo tomar mejores decisiones en el momento adecuado. LOCK te proporciona toda la información de forma rápida y efectiva.",
-        },
-      ],
-
       //typed
       typeValue: "",
       typeStatus: false,
@@ -268,6 +365,13 @@ export default {
         subtitulo: this.subtitulo,
         boton1: this.boton1,
         boton2: this.boton2,
+        //funciones de lock
+        titulo3: this.titulo3,
+        titulo4: this.titulo4,
+        titulo5: this.titulo5,
+        subtitulo3: this.subtitulo3,
+        subtitulo4: this.subtitulo4,
+        subtitulo5: this.subtitulo5,
       });
     },
     typeText() {
@@ -315,6 +419,8 @@ export default {
 };
 </script>
 
+<!-- ********************************************************************************* -->
+
 <style lang="scss" scoped>
 .circle {
   stroke: white;
@@ -328,7 +434,7 @@ export default {
   background-color: white;
   height: 50px;
 }
-.btn-m{
+.btn-m {
   background-color: rgba(14, 0, 9, 0);
   color: rgb(0, 0, 0);
 }
@@ -544,5 +650,17 @@ body.dark #hero {
 body.dark .card {
   background-color: #0300c2;
   color: #fff;
+}
+.f-card {
+  display: flex;
+  text-align: center;
+  gap: 3rem;
+  flex-wrap: nowrap;
+}
+@media screen and (max-width: 968px) {
+  .f-card {
+    display: flex;
+    flex-direction: column;
+  }
 }
 </style>

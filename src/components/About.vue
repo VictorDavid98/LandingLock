@@ -1,24 +1,47 @@
 <template>
   <section id="about">
-    
-      <div class="contenedor">
-        <div class="content">
-          <div class="centrar" v-for="a in sobre" :key="a.id">
-            <h1 style="font-size: 35px">{{ a.titulo }}</h1>
-            <p class="mt-8 justify">
-              {{ a.descripcion }}
-            </p>
-          </div>
-          <div class="centrar-2 mt-6">
-            <img
-              src="../assets/img/undraw_secure_login_pdn4.svg"
-              alt=""
-              width="100%"
-            />
-          </div>
+    <div class="contenedor" v-for="a in about" :key="a.id">
+      <div class="content">
+        <div class="centrar" >
+          <h1 style="font-size: 35px">
+            {{ a.titulo }}
+            <v-btn
+              icon
+              outlined
+              style="border: none"
+              @click.stop="modificarTitulo = true"
+              ><v-icon>mdi-pencil</v-icon></v-btn
+            >
+          </h1>
+          <p class="mt-8 justify">
+            {{ a.descripcion }}
+            <v-btn
+              icon
+              outlined
+              style="border: none"
+              @click.stop="modificarDescripcion = true"
+              ><v-icon>mdi-pencil</v-icon></v-btn
+            >
+          </p>
+        </div>
+        <div class="centrar-2 mt-6">
+          <img
+            src="../assets/img/undraw_secure_login_pdn4.svg"
+            alt=""
+            width="100%"
+          />
         </div>
       </div>
-  
+      <v-dialog v-model="modificarTitulo" width="600px">
+      <input type="text" v-model="titulo" class="input-m" />
+      <v-btn color="orange" @click="updateAbout(a.id)">Modificar</v-btn>
+    </v-dialog>
+    <v-dialog v-model="modificarDescripcion" width="600px">
+      <input type="text" v-model="descripcion" class="input-m" />
+      <v-btn color="orange" @click="updateAbout(a.id)">Modificar</v-btn>
+    </v-dialog>
+    </div>
+    
   </section>
 </template>
 
@@ -26,12 +49,24 @@
 import { db } from "../firebase/db";
 export default {
   data() {
-    return{
-      sobre: []
-    }
+    return {
+      about: [],
+      titulo: "La seguridad que necesitas",
+      descripcion: "Perder no es sinónimo de fracasar, perder es aprender y de este aprendizaje nace el Lock, es por esto que al combinar nuestra experiencia con un equipo de soporte y desarrolladores altamente capacitados nos lleva a idear y diseñar un sistema que responde a las necesidades y requerimientos actuales. Una aplicación simple y altamente efectiva que apoya el trabajo del personal de seguridad y su gestión de administración lock es una plataforma flexible programable y adaptable a las necesidades particulares de cada usuario.",
+      modificarTitulo: false,
+      modificarDescripcion: false,
+    };
+  },
+  methods: {
+    updateAbout(id) {
+      db.collection("about").doc(id).update({
+        titulo: this.titulo,
+        descripcion: this.descripcion,
+      });
+    },
   },
   firestore: {
-    sobre: db.collection("about"),
+    about: db.collection("about"),
   },
 };
 </script>
@@ -41,7 +76,11 @@ export default {
   margin-top: 100px;
   background-color: #f3f3f3;
 }
-
+.input-m {
+  color: black;
+  background-color: white;
+  height: 50px;
+}
 .justify {
   text-align: justify;
 }
@@ -56,13 +95,14 @@ body.dark .contenedor {
   background-color: #0300c2;
 }
 .content {
-  width: 81%;
+  width: 75%;
   margin: 0;
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 40px;
   color: black;
   padding: 30px 30px;
+  align-items: center;
 }
 body.dark .content {
   color: #fff;
