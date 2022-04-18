@@ -42,8 +42,8 @@
             ><v-icon>mdi-pencil</v-icon></v-btn
           >
         </div>
-        <div class="img-p">
-          <img src="@/assets/img/mockups-6.webp" width="100%" alt="" />
+        <div class="img-p pt-3">
+          <img src="@/assets/img/mockups-f01.webp" width="90%" alt="" />
         </div>
       </section>
 
@@ -51,7 +51,7 @@
 
       <section class="c-contenido2">
         <div class="img-p">
-          <img src="@/assets/img/mockups-2.webp" width="50%" alt="" />
+          <img src="@/assets/img/mockups-f03.webp" width="50%" alt="" />
         </div>
         <div class="texto-content" data-aos="fade-up" data-aos-duration="3000">
           <h1 class="mt-10 mb-10">
@@ -139,7 +139,7 @@
           >
         </div>
         <div class="img-p">
-          <img src="@/assets/img/mockups-7.webp" width="100%" alt="" />
+          <img src="@/assets/img/mockups-f02.webp" width="100%" alt="" />
         </div>
       </section>
       <svg
